@@ -2060,6 +2060,7 @@ exportObj.basicCardData = ->
             slots: [
                 "Astromech"
                 "Configuration"
+                "Illicit"
             ]
         }
         {
@@ -16406,6 +16407,13 @@ exportObj.basicCardData = ->
             also_occupies_upgrades: [ "Crew" ]
             applies_condition: '''Death Watch Commandos'''.canonicalize()
         }
+        {
+            name: "Guzzolene Injector"
+            id: 470
+            points: 2
+            charge: 2
+            slot: "Illicit"
+        }
     ]
 
 
@@ -27237,6 +27245,8 @@ exportObj.cardLoaders.English = () ->
            text: """If you would drop a %CREW% remote using a [%STRAIGHT%] template, you may use a bank [%BANKLEFT% or %BANKRIGHT%] tempalte of the same speed instead and can alighn that template's middle line with the hashmark on your ship's left or right side instead of your rear guides."""
         "Combat Boarding Tube":
            text: """During the System Phase, if you would drop a %CREW% remote and there is an enemy medium, large, or huge ship at range 0-1 in your %REARARC%, you may place that device in the play area in your %REARARC% at range 0-1 so that it is at range 0 of that enemy ship instead. Then, that enemy ship gains 1 deplete, strain, or stress token of your choice."""
+        "Guzzolene Injector":
+           text: """Before you execute a maneuver, you may spend 1 %CHARGE%. If you do, increase that maneuver's speed by 1, if able, then roll 1 attack die. Suffer 1 %HIT% damage for each %HIT%/%CRIT% result."""
 
 
         # Epic upgrades
@@ -38136,6 +38146,14 @@ exportObj.manifestByExpansion =
             name: 'Hotshot Tail Blaster'
             type: 'upgrade'
             count: 1
+        }
+    ]
+    
+    "Purchased from a very legitimate Jawa": [
+        {
+            name: 'Guzzolene Injector'
+            type: 'upgrade'
+            count: 10
         }
     ]
 
