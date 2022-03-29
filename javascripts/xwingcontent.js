@@ -1,4 +1,4 @@
-var displayName, exportObj, sortWithoutQuotes, _base,
+var condition_translations, data, displayName, exportObj, name, sortWithoutQuotes, _base,
   __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; },
   __hasProp = {}.hasOwnProperty;
 
@@ -11123,10 +11123,51 @@ exportObj.basicCardData = function() {
         applies_condition: 'Death Watch Commandos'.canonicalize()
       }, {
         name: "Guzzolene Injector",
-        id: 470,
+        id: 801,
         points: 2,
         charge: 2,
         slot: "Illicit"
+      }, {
+        name: "Supercharger",
+        id: 802,
+        points: 3,
+        charge: 3,
+        slot: "Illicit"
+      }, {
+        name: "Suspicious-looking Droid",
+        id: 803,
+        points: 4,
+        charge: 3,
+        unique: true,
+        slot: "Illicit",
+        restrictions: [["Action", "Focus"]]
+      }, {
+        name: "Scavenged Upgrade",
+        id: 804,
+        points: 4,
+        unique: true,
+        slot: "Illicit"
+      }, {
+        name: "Prototype G-Diffuser",
+        id: 805,
+        points: 4,
+        charge: 1,
+        unique: true,
+        slot: "Illicit"
+      }, {
+        name: "Overclocked Hyperdrive",
+        id: 806,
+        points: 5,
+        unique: true,
+        slot: "Illicit"
+      }, {
+        name: "Defective Jawaballs",
+        id: 807,
+        points: 5,
+        charge: 2,
+        unique: true,
+        slot: "Illicit",
+        applies_condition: 'Defective Jawaballs'.canonicalize()
       }
     ],
     conditionsById: [
@@ -11260,6 +11301,9 @@ exportObj.basicCardData = function() {
       }, {
         name: 'Mandalorian Super Commandos',
         id: 39
+      }, {
+        name: 'Defective Jawaballs',
+        id: 100
       }
     ],
     quickbuildsById: [
@@ -16414,7 +16458,7 @@ if (exportObj.cardLoaders == null) {
 }
 
 exportObj.cardLoaders.English = function() {
-  var condition_translations, data, name, pilot_translations, upgrade_translations;
+  var pilot_translations, upgrade_translations;
   exportObj.cardLanguage = 'English';
   exportObj.renameShip("YT-1300", "Modified YT-1300 Light Freighter");
   exportObj.renameShip("StarViper", "StarViper-class Attack Platform");
@@ -18456,7 +18500,7 @@ exportObj.cardLoaders.English = function() {
       text: "<i class = flavor_text>The Separatist Alliance has close ties to certain mercenaries and criminal groups and, as the war rages on, its technology sometimes finds its way into unsavory hands.</i> %LINEBREAK% <strong>Tractor Grasp:</strong> After you perform a <b>Tractor Tentacles</b> attack that hits, the defender gains 1 tractor token."
     }
   };
-  upgrade_translations = {
+  return upgrade_translations = {
     "0-0-0": {
       display_name: "0-0-0",
       text: "At the start of the Engagement Phase, you may choose 1 enemy ship at range 0-1. If you do, you gain 1 calculate token unless that ship chooses to gain 1 stress token."
@@ -19922,426 +19966,458 @@ exportObj.cardLoaders.English = function() {
     "Guzzolene Injector": {
       text: "Before you execute a maneuver, you may spend 1 %CHARGE%. If you do, increase that maneuver's speed by 1, if able, then roll 1 attack die. Suffer 1 %HIT% damage for each %HIT%/%CRIT% result."
     },
-    "Admiral Ozzel": {
-      display_name: "Admiral Ozzel",
-      text: "While a friendly large or huge ship at range 0-3 executes a maneuver, it may suffer 1 %HIT% damage to execute a maneuver of the same bearing and difficulty of a speed 1 higher or lower instead."
-    },
-    "Azmorigan": {
-      display_name: "Azmorigan",
-      text: "During the End Phase, you may choose up to 2 friendly ships at range 0-1. If you do, each of these ships does not remove 1 calculate or evade token."
-    },
-    "Captain Needa": {
-      display_name: "Captain Needa",
-      text: "After a friendly ship at range 0-4 reveals its dial, you may spend 1 %CHARGE%. If you do, it sets its dial to another maneuver of the same difficulty and speed."
-    },
-    "Strategic Commander": {
-      display_name: "Strategic Commander",
-      text: "After a friendly ship at range 0-4 reveals its dial, you may spend 1 %CHARGE%. If you do, it sets its dial to another maneuver of the same difficulty and speed."
-    },
-    "Carlist Rieekan": {
-      display_name: "Carlist Rieekan",
-      text: "After a friendly ship at range 0-2 is destroyed, you may choose a friendly ship at range 0-2. If you do, it may perform a red %EVADE% action."
-    },
-    "Jan Dodonna": {
-      display_name: "Jan Dodonna",
-      text: "Friendly ships at range 0-3 can spend your focus and evade tokens."
-    },
-    "Raymus Antilles": {
-      display_name: "Raymus Antilles",
-      text: "After you are destroyed, each friendly ship at range 0-1 gains 1 focus token. After you are destroyed, you are not removed until the end of the End Phase."
-    },
-    "Stalwart Captain": {
-      display_name: "Stalwart Captain",
-      text: "After you are destroyed, you are not removed until the end of the End Phase."
-    },
-    "Agent of the Empire": {
-      display_name: "Agent of the Empire",
-      text: "You are a <strong>wing leader</strong>. Your wingmates must be 2, 3, 4, or 5 TIE/ln fighters. %LINEBREAK% While you defend, up to 2 of your wingmates in the attack arc may suffer 1 %HIT% or %CRIT% damage to cancel a matching result."
-    },
-    "First Order Elite": {
-      display_name: "First Order Elite",
-      text: "You are a <strong>wing leader</strong>. Your wingmates must be 2 or 3 TIE/fo fighters or TIE/sf fighters. %LINEBREAK% While you defend, up to 2 of your wingmates in the attack arc may suffer 1 %HIT% or %CRIT% damage to cancel a matching result."
-    },
-    "Veteran Wing Leader": {
-      display_name: "Veteran Wing Leader",
-      text: "You are a <strong>wing leader</strong>. Your wingmates must be 2, 3, 4, or 5 other ships of your ship type. %LINEBREAK% While you defend, up to 2 of your wingmates in the attack arc may suffer 1 %HIT% or %CRIT% damage to cancel a matching result."
-    },
-    "Dreadnought Hunter": {
-      display_name: "Dreadnought Hunter",
-      text: "While you perform an attack against a huge ship, if the attack deals a faceup damage card to the defender and the defender is in your %BULLSEYEARC%, you may apply the <strong>Precision Shot</strong> effect even if you are not in the specified arc."
-    },
-    "Ion Cannon Battery": {
-      display_name: "Ion Cannon Battery",
-      text: "<strong>Online: </strong> Setup: Equip this side faceup.%LINEBREAK% Bonus Attack: Spend 1 %ENERGY%. If this attack hits, the defender suffers 1 %CRIT% damage, and all %HIT%/%CRIT% results inflict ion tokens instead of damage. %LINEBREAK%<strong>Offline: </strong> %LINEBREAK% After you engage, you may spend 2 %ENERGY% to flip this card."
-    },
-    "Targeting Battery": {
-      display_name: "Targeting Battery",
-      text: "<strong>Online: </strong> Setup: Equip this side faceup.%LINEBREAK% Bonus Attack: Spend 1 %ENERGY%. After you perform this attack, you may acquire a lock on the defender. %LINEBREAK%<strong>Offline: </strong> %LINEBREAK% After you engage, you may spend 2 %ENERGY% to flip this card."
-    },
-    "Ordnance Tubes": {
-      display_name: "Ordnance Tubes",
-      text: "<strong>Online: </strong> Setup: Equip this side faceup. %LINEBREAK% You can perform %TORPEDO% and %MISSILE% attacks only as bonus attacks. You <strong>must</strong> treat the %FRONTARC% requirement of your equipped %TORPEDO% and %MISSILE% upgrades as %FULLFRONTARC%. %LINEBREAK% Bonus Attack: Perform a %TORPEDO% attack. %LINEBREAK% Bonus Attack: Perform a %MISSILE% attack. %LINEBREAK%<strong>Offline: </strong> %LINEBREAK% You must treat the %FRONTARC% requirement of your equipped %TORPEDO% and %MISSILE% upgrades as %BULLSEYEARC%. %LINEBREAK% Action: Spend 2 %ENERGY% to flip this card."
-    },
-    "Point-Defense Battery": {
-      display_name: "Point-Defense Battery",
-      text: "<strong>Online: </strong> Setup: Equip this side faceup. %LINEBREAK% Bonus Attack: Spend 1 %ENERGY%. %LINEBREAK% Bonus Attack: Spend 1 %ENERGY%. %LINEBREAK% Bonus Attack: Spend 1 %ENERGY%. %LINEBREAK% Bonus Attack: Spend 1 %ENERGY%. %LINEBREAK%<strong>Offline: </strong> %LINEBREAK% After you engage, you may spend 2 %ENERGY% to flip this card."
-    },
-    "Turbolaser Battery": {
-      display_name: "Turbolaser Battery",
-      text: "<strong>Online: </strong> Setup: Equip this side faceup.%LINEBREAK% Bonus Attack (%LOCK%): Spend 3 %ENERGY%. If this attack hits, add 3 %HIT% results. %LINEBREAK% <strong>Offline: </strong> %LINEBREAK% After you engage, you may spend 2 %ENERGY% to flip this card."
-    },
-    "Bombardment Specialists": {
-      display_name: "Bombardment Specialists",
-      text: "While you perform an attack, you may spend 1 calculate token to increase or decrease the range requirement by 1, to a limit of 0-5."
-    },
-    "Comms Team": {
-      display_name: "Comms Team",
-      text: "After you perform a %COORDINATE% action, you may spend up to 2 %ENERGY% to coordinate that many additional ships at range 0-1 of the ship you coordinated."
-    },
-    "IG-RM Droids": {
-      display_name: "IG-RM Droids",
-      text: "While you perform an attack, if you are calculating, you may change 1 %HIT% result to a %CRIT% result."
-    },
-    "Gunnery Specialists": {
-      display_name: "Gunnery Specialists",
-      text: "While you perform a primary or %HARDPOINT% attack, you may spend 1 or more %ENERGY% to reroll that many attack dice."
-    },
-    "Damage Control Team": {
-      display_name: "Damage Control Team",
-      text: "Before you engage, you may spend 1 or more %ENERGY% to flip that many of your <strong>Offline</strong> upgrade cards.%LINEBREAK% Action: Spend 1 or more %ENERGY% to repair that many of your faceup <strong>Ship</strong> damage cards."
-    },
-    "Ordnance Team": {
-      display_name: "Ordnance Team",
-      text: "While you perform a %RELOAD% action, you may spend up to 3 %ENERGY% to reload that many additional %CHARGE% on your equipped %MISSILE%/%TORPEDO% upgrades. %LINEBREAK% After you perform a %RELOAD% action, you may spend 1 %ENERGY% to remove 1 disarm token."
-    },
-    "Sensor Experts": {
-      display_name: "Sensor Experts",
-      text: "You can maintain up to 3 locks on different objects. %LINEBREAK% After you perform a %LOCK% action, you may spend up to 2 %ENERGY% to acquire a lock on that many other objects at range 0-1 of the object you locked, ignoring range restrictions."
-    },
-    "Quick-Release Locks": {
-      display_name: "Quick-Release Locks",
-      text: "During the System Phase, you may spend 1 %CHARGE% to place 1 cargo crate drift in your %REARARC% at range 0. It cannot overlap a ship this way.%LINEBREAK% This card's %CHARGE% cannot be recovered."
-    },
-    "Saboteur's Map": {
-      display_name: "Saboteur's Map",
-      text: "At the end of Setup, you may spend up to 1 %CHARGE% from each of your equipped <strong>Mine</strong> upgrades to place the corresponding device in the play area beyond range 2 of any enemy ship, strategic marker, or other device."
-    },
-    "Scanner Baffler": {
-      display_name: "Scanner Baffler",
-      text: "At the end of Setup, you may choose any number of other friendly, non-huge ships in your deployment area at range 0-1. If you do, place those ships anywhere in the same deployment area."
-    },
-    "Adaptive Shields": {
-      display_name: "Adaptive Shields",
-      text: "While another friendly ship at range 0-1 defends, if it is a smaller size than you, you may spend 1 shield or 2 %ENERGY% to cancel 1 %HIT% or %CRIT% result."
-    },
-    "Boosted Scanners": {
-      display_name: "Boosted Scanners",
-      text: "While you lock, coordinate, or jam, you may spend up to 3 %ENERGY% to increase the range at which you can choose an object by 1 per %ENERGY% spent this way, to a maximum of range 5."
-    },
-    "Optimized Power Core": {
-      display_name: "Optimized Power Core",
-      text: "After you execute a blue maneuver, recover 1 %ENERGY%."
-    },
-    "Tibanna Reserves": {
-      display_name: "Tibanna Reserves",
-      text: "Action: Spend 1 %CHARGE% to recover 2 %ENERGY%."
-    },
-    "Toryn Farr": {
-      display_name: "Toryn Farr",
-      text: "After you coordinate a friendly ship, it may acquire a lock on a ship you are locking, ignoring range restrictions."
-    },
-    "Dodonna's Pride": {
-      display_name: "Dodonna's Pride",
-      text: " "
-    },
-    "Jaina's Light": {
-      display_name: "Jaina's Light",
-      text: "While a friendly ship at range 0-2 defends, if the attack is obstructed by an obstacle, you may spend 1 %ENERGY%. If you do, the defender rolls 1 additional defense die."
-    },
-    "Liberator": {
-      display_name: "Liberator",
-      text: "You can dock up to 2 small ships. %LINEBREAK% After a ship deploys from you, it may perform a %FOCUS% or %BARRELROLL% action."
-    },
-    "Tantive IV": {
-      display_name: "Tantive IV",
-      text: "While you defend, if the attacker is in your %REARARC%, you may roll 1 additional defense die."
-    },
-    "Thunderstrike": {
-      display_name: "Thunderstrike",
-      text: "While you perform a bonus attack, if you have not attacked the defender this round, you may reroll 1 attack die."
-    },
-    "Bright Hope": {
-      display_name: "Bright Hope",
-      text: "You can reinforce only your %FULLFRONTARC%. %LINEBREAK% While you defend, if you are reinforced and the attacker is in your %FULLFRONTARC%, you may roll 1 additional defense die."
-    },
-    "Luminous": {
-      display_name: "Luminous",
-      text: "Setup: You are placed in reserve. %LINEBREAK% At the end of setup, you are placed in the play area at range 0-2 of a friendly ship."
-    },
-    "Quantum Storm": {
-      display_name: "Quantum Storm",
-      text: "After you fully execute a white maneuver, recover 1 %ENERGY%."
-    },
-    "Assailer": {
-      display_name: "Assailer",
-      text: "While you defend, if the attack range is 1, you may roll 1 additional defense die."
-    },
-    "Corvus": {
-      display_name: "Corvus",
-      text: "You can dock up to 2 small ships. %LINEBREAK% After you perform a %CALCULATE% action, gain 1 calculate token."
-    },
-    "Impetuous": {
-      display_name: "Impetuous",
-      text: "After you perform an attack, if the defender was destroyed, you may perform a %FOCUS% or %LOCK% action."
-    },
-    "Instigator": {
-      display_name: "Instigator",
-      text: "While you perform an attack, if the defender has an orange or red token, you may reroll up to 2 attack dice."
-    },
-    "Blood Crow": {
-      display_name: "Blood Crow",
-      text: "While you perform an attack at attack range 1-2, you may add 1 %FOCUS% result."
-    },
-    "Requiem": {
-      display_name: "Requiem",
-      text: "After a ship deploys from you, it may acquire a lock on one ship you are locking, ignoring range restrictions."
-    },
-    "Suppressor": {
-      display_name: "Suppressor",
-      text: "After you coordinate a friendly ship, you may spend 1 %ENERGY% to jam an enemy ship at range 0-2 of that ship, ignoring range restrictions."
-    },
-    "Vector": {
-      display_name: "Vector",
-      text: "After a ship deploys from you, it may perform a %EVADE% or %BOOST% action."
-    },
-    "Broken Horn": {
-      display_name: "Broken Horn",
-      text: "If you are damaged, reduce the difficulty of your speed 3-5 maneuvers."
-    },
-    "Merchant One": {
-      display_name: "Merchant One",
-      text: "Bonus Attack: Perform a %TURRET% attack."
-    },
-    "Insatiable Worrt": {
-      display_name: "Insatiable Worrt",
-      text: "During the End Phase, you may recover 1 additional shield or 1 additional %ENERGY%."
-    },
-    "Corsair Refit": {
-      display_name: "Corsair Refit",
-      text: "Bonus Attack: Spend 1 %ENERGY% to perform a %CANNON%, %TURRET%, or %MISSILE% attack."
-    },
-    "Enhanced Propulsion": {
-      display_name: "Enhanced Propulsion",
-      text: "<strong>Setup:</strong> Equip this side faceup.%LINEBREAK% At the start of the End Phase, you may spend 2 %ENERGY% to execute a white [2 %STRAIGHT%], [1 %BANKLEFT%], or [1 %BANKRIGHT%] maneuver. %LINEBREAK% "
-    },
-    "Drill Beak": {
-      display_name: "Drill Beak",
-      text: "<strong>Setup:</strong> Equip this side faceup.%LINEBREAK% You can preform this attack at range 0.\n%LINEBREAK% <strong>Bonus Attack:</strong> Spend 1 %ENERGY%. If the attack range is 0, change all %HIT% results to %CRIT% results."
-    },
-    "Tractor Tentacles": {
-      display_name: "Tractor Tentacles",
-      text: "<strong>Setup:</strong> Equip this side faceup.\n%LINEBREAK% <strong>Bonus Attack</strong> %LINEBREAK% <strong>Bonus Attack:</strong> Spend 1 %ENERGY%. %LINEBREAK% <strong>Bonus Attack:</strong> Spend 1 %ENERGY%. %LINEBREAK% <strong>Bonus Attack:</strong> Spend 1 %ENERGY%."
-    },
-    "Tracking Torpedoes": {
-      display_name: "Tracking Torpedoes",
-      text: "During the System Phase, you may spend up to 3 %CHARGE% to launch that many tracking torpedoes using the [%BANKLEFT% 3], [%STRAIGHT% 4], and [%BANKRIGHT% 3] templates. Each device must use a seperate tempalte. Then each device may acquire a lock on an object you have locked, ignoring range restrictions.%LINEBREAK% This card's %CHARGE% cannot be recovered."
-    },
-    "Proton Cannon Battery": {
-      display_name: "Proton Cannon Battery",
-      text: "<strong>Setup:</strong> Equip this side faceup.\n%LINEBREAK% <strong>Bonus Attack:</strong> Change 1 %HIT% result to a %CRIT% result. %LINEBREAK% <strong>Bonus Attack:</strong> Spend 1 %ENERGY%. Change 1 %HIT% result to a %CRIT% result."
-    },
-    "Tractor Technicians": {
-      display_name: "Tractor Technicians",
-      text: "During the End Phase, each other ship at range 0-1 cannot remove its tractor tokens. %LINEBREAK% Before a tractored enemy ship at range 0-1 reveals its dial, you may spend 1 %ENERGY%. If you do, while that ship executes its maneuver this activation, it reduces the speed of that maneuver by 1, to a minimum of 1."
-    },
-    "Asajj Ventress (Command)": {
-      display_name: "Asajj Ventress",
-      text: "During the System Phase, you may spend 1 %FORCE%. IF you do, each enemy ship in your %FRONTARC% at range 0-1 gains 1 strain token unless it chooses to gain 1 jam token."
-    },
-    "Hondo Ohnaka (Command)": {
-      display_name: "Hondo Ohnaka",
-      text: "During the System Phase, you may spend 1 %CHARGE% and choose 1 friendly shiop at range 0-1. Move 1 Victory Token or Objective Token from its ship card to your ship card, or from your ship card to its ship card."
-    },
-    "Zealous Captain": {
-      display_name: "Zealous Captain",
-      text: "During the Engagement Phase, at initiative 4, you may spend 1 %ENERGY% to perform a bonus %HARDPOINT% attack."
-    },
-    "General Grievous (Command)": {
-      display_name: "General Grievous",
-      text: "During the Engagement Phase, at initiative 4, you may spend 1 %ENERGY% to perform a bonus %HARDPOINT% attack. %LINEBREAK% You can perform attacks against friendly ships. %LINEBREAK% After you perform an attack, if the defender was destroyed, each friendly ship at range 0-2 of it may perform a %CALCULATE% action."
-    },
-    "Mar Tuuk": {
-      display_name: "Mar Tuuk",
-      text: "<strong>Setup:</strong> After placing forces, choose 1 friendly wing of ships with %CALCULATE% on their action bars and place that wing in reserve. %LINEBREAK% During the End Phase, you may place that wing within your deployment area or beyond range 2 of any enemy shp. Then you may choose 1 enemy ship at range 0-1 of you; each ship in that wing acquires a lock on it."
-    },
-    "Riff Tamson": {
-      display_name: "Riff Tamson",
-      text: "During the Engagement Phase, at initiative 5, you may spend 1 %ENERGY% to perform a bonus %HARDPOINT% attack. %LINEBREAK% After you perform an attack, if the defender was dealt 1 or more faceup damage cards, it gains 2 strain tokens."
-    },
-    "Corsair Crew": {
-      display_name: "Corsair Crew",
-      text: "While you perform an attack against a standard ship, you may spend 1 %HIT% result. If you do, the defender gains 1 deplete token."
-    },
-    "Grappler": {
-      display_name: "Grappler",
-      text: "While you perform a <b>Drill Beak</b> attack, at range 1, if the defender is tractored, treat it as being range 0 instead."
-    },
-    "Nautolan's Revenge": {
-      display_name: "Nautolan's Revenge",
-      text: "Before you engage, you may spend up to 2 calculate tokens. If you do, recover that many %ENERGY%."
-    },
-    "Droid Crew": {
-      display_name: "Droid Crew",
-      text: "While you perform a white %FOCUS% action, treat it as red instead. %LINEBREAK% At the start of the End Phase, repair all of your faceup <b>Crew</b> damage cards."
-    },
-    "Trident": {
-      display_name: "Trident",
-      text: "After you overlap a ship or a ship overlaps you, if it is not tractored, you may spend 1 %ENERGY%. If you do, it gains 3 tractor tokens."
-    },
-    "Neimoidian Grasp": {
-      display_name: "Neimoidian Grasp",
-      text: "After you perform an attack, you may perform a red  %EVADE% action. While you defend, if you are evading, you may roll 1 addtional defense die."
+    "Supercharger": {
+      text: "<strong>Setup:</strong> Lose 3 %CHARGE%. %LINEBREAK% After you fully execute a speed 3-5 maneuver, recover 1 %CHARGE%. Then, you <strong>must</strong> spend 3 %CHARGE% if able to perform a %SLAM% action, even while stressed. While you perform a %SLAM% action this way, use a template of 1 speed higher if able, then gain 1 strain token and remove 1 disarm token. %LINEBREAK% Whenever you fail a SLAM action, suffer 1 %HIT% damage."
+    },
+    "Suspicious-looking Droid": {
+      text: "<strong>Suspicious-looking Droid:</strong> Stetup: Equip this side faceup. %LINEBREAK% During the System Phase, you <strong>must</strong> spend 1 %CHARGE% to gain 1 calculate token, if able. %LINEBREAK% During the End Phase, if you have 0 active %CHARGE%, flip this card. %LINEBREAK% <strong>Revolutionary Droid</strong> Whenever you would gain a focus token, gain 1 calculate token instead."
     }
   };
-  condition_translations = {
-    'Suppressive Fire': {
-      text: 'While you perform an attack against a ship other than <strong>Captain Rex</strong>, roll 1 fewer attack die. %LINEBREAK% After <strong>Captain Rex</strong> defends, remove this card.  %LINEBREAK% At the end of the Combat Phase, if <strong>Captain Rex</strong> did not perform an attack this phase, remove this card. %LINEBREAK% After <strong>Captain Rex</strong> is destroyed, remove this card.'
-    },
-    'Hunted': {
-      text: 'After you are destroyed, you must choose another friendly ship and assign this condition to it, if able.'
-    },
-    'Listening Device': {
-      text: 'During the System Phase, if an enemy ship with the <strong>Informant</strong> upgrade is at range 0-2, flip your dial faceup.'
-    },
-    'Rattled': {
-      text: 'After a bomb or mine at range 0-1 detonates, suffer 1 %CRIT%. Then, remove this card. %LINEBREAK% Action: If there are no bombs or mines at range 0-1, remove this card.'
-    },
-    'Optimized Prototype': {
-      text: 'While you perform a %FRONTARC% primary attack against a ship locked by a friendly ship with the <strong>Director Krennic</strong> upgrade, you may spend 1 %HIT%/%CRIT%/%FOCUS% result. If you do, choose one: the defender loses 1 shield or the defender flips 1 of its facedown damage cards.'
-    },
-    'I\'ll Show You the Dark Side': {
-      text: ' When this card is assigned, if there is no faceup damage card on it, the player who assigned it searches the damage deck for 1 Pilot damage card and places it faceup on this card. Then shuffle the damage deck. When you would suffer 1 %CRIT% damage, you are instead dealt the faceup damage card on this card. Then, remove this card. '
-    },
-    'Proton Bomb': {
-      text: '<strong>Types:</strong> Device, Bomb %LINEBREAK% At the end of the Activation Phase, this device detonates. When this device detonates, each ship and remote at range 0–1 suffers 1 %CRIT% damage.%LINEBREAK%<i>Errata (Official Rulings Thread 03/2019): Added: "and remote"</i>'
-    },
-    'Seismic Charge': {
-      text: '<strong>Types:</strong> Device, Bomb %LINEBREAK% At the end of the Activation Phase this device detonates. When this device detonates, choose 1 obstacle at range 0–1. Each ship and remote at range 0–1 of the obstacle suffers 1 %HIT% damage. Then remove that obstacle.%LINEBREAK%<i>Errata (Official Rulings Thread 03/2019): Added: "and remote"</i> '
-    },
-    'Bomblet': {
-      text: '<strong>Types:</strong> Device, Bomb %LINEBREAK% At the end of the Activation Phase this device detonates. When this device detonates, each ship and remote at range 0–1 rolls 2 attack dice. Each ship and remote suffers 1 %HIT% damage for each %HIT%/%CRIT% result.%LINEBREAK%<i>Errata (Official Rulings Thread 03/2019): Added: "and remote"</i>'
-    },
-    'Loose Cargo': {
-      text: '<strong>Types:</strong> Obstacle, Placed %LINEBREAK% Loose cargo is a debris cloud.'
-    },
-    'Spare Parts': {
-      text: '<strong>Types:</strong> Obstacle, Placed %LINEBREAK% Spare parts is a debris cloud. %LINEBREAK% When this object is dropped, fit the tab between the ship’s rear guides.'
-    },
-    'Conner Net': {
-      text: '<strong>Types:</strong> Device, Mine %LINEBREAK% After a ship overlaps or moves through this device, it detonates. When this device detonates, the ship suffers 1 %HIT% damage and gains 3 ion tokens.'
-    },
-    'Proximity Mine': {
-      text: '<strong>Types:</strong> Device, Mine %LINEBREAK% After a ship overlaps or moves through this device, it detonates. When this device detonates, that ship rolls 2 attack dice. That ship then suffers 1 %HIT% plus 1 %HIT%/%CRIT% damage for each matching result.%LINEBREAK%<i>Errata (since rules reference 1.0.2): Added: "1 %HIT% plus"</i>'
-    },
-    'DRK-1 Probe Droid': {
-      text: 'INIT: 0 <br>AGILITY: 3 <br>HULL: 1 %LINEBREAK% <strong>Types:</strong> Device, Remote %LINEBREAK%  <strong>System Phase:</strong> The DRK-1 probe droid’s controlling player may choose a [2 %BANKLEFT%], [2 %STRAIGHT%] or [2 %BANKRIGHT%] template and any set of the DRK-1’s guides. The player then relocates the remote, placing the DRK-1 at the other end of the template. It can be placed overlapping an object this way. %LINEBREAK%If the DRK-1 overlaps a ship, use the position marker to denote the ship’s position, then place the ship on top of the remote. %LINEBREAK%<strong>Activation, Engagement, and End Phase:</strong> No effect. %LINEBREAK%<strong>Other Rules:</strong> While a ship locks an object or jams an enemy ship, it may measure range from a friendly DRK-1 probe droid. After an enemy ship executes a maneuver that causes it to overlap a DRK-1 probe droid, the ship’s controller rolls 1 attack die. On a %FOCUS% result, the DRK-1 probe droid suffers 1 %HIT% damage.'
-    },
-    'Buzz Droid Swarm': {
-      text: 'INIT: 0 <br>AGILITY: 1 <br>HULL: 1 %LINEBREAK% <strong>Types:</strong> Device, Remote %LINEBREAK% <strong>System, Activation, and End Phase:</strong> No effect. %LINEBREAK%<strong>Engagement Phase:</strong> When you engage, each enemy ship at range 0 of the buzz droid swarm suffers 1 %CRIT% damage. %LINEBREAK%<strong>Other Rules:</strong> After an enemy ship overlaps or moves through a buzz droid swarm, the swarm’s controlling player relocates it by aligning the tab to that ship’s front or rear guides (this ship is at range 0 of the swarm). The swarm cannot be aligned to a set of the ship’s guides if doing so would cause it to overlap an object. If the swarm cannot be placed at a chosen set of guides, its controlling player must align it to the other set of the ship’s guides. If it cannot be aligned to the other set, the swarm and the enemy ship that overlapped or moved through it each suffer 1 %HIT% damage. %LINEBREAK%<i>Errata (since rules reference 1.4): Agility adjusted for balance.</i>'
-    },
-    'It\'s the Resistance': {
-      text: '<strong>Setup:</strong> Start in reserve. %LINEBREAK% When you deploy, you are placed within range 1 of any table edge and beyond range 3 of any enemy ship. %LINEBREAK% At the start of the round, if all of the friendly <strong>GA-97</strong>\'s %CHARGE% are active, you <strong>must</strong> deploy. Then remove this card. After the friendly <strong>GA-97</strong> is destroyed, you <strong>must</strong> deploy. Then gain 1 disarm token and remove this card.'
-    },
-    'Electro-Proton Bomb': {
-      text: '<strong>Types:</strong> Device, Bomb %LINEBREAK%  At the end of the Activation Phase this device detonates. When this device detonates, each ship and remote at range 0–2 rolls 4 attack dice. Each ship loses 1 shield for each blank result, gains 1 ion token for each %FOCUS%/%HIT% result, and gains 1 disarm token for each %CRIT% result. Each remote at range 0–1 loses 1 shield for each blank result and suffers 1 damage for each %FOCUS%/%HIT% result.'
-    },
-    'Decoyed': {
-      text: 'While you defend, each friendly <strong>Naboo Handmaiden</strong> in the attack arc may spend 1 evade token to change one of your results to an %EVADE% result. %LINEBREAK% If you are a Naboo Royal N-1 Starfighter, each friendly <strong>Naboo Handmaiden</strong> in the attack arc may spend 1 evade token to add 1 %EVADE% result instead.'
-    },
-    'Compromising Intel': {
-      text: 'During the System Phase, if the enemy <strong>Vi Moradi</strong> is at range 0-3, flip your dial faceup. %LINEBREAK% While you defend or perform an attack against the enemy <strong>Vi Moradi</strong>, you cannot spend focus tokens.'
-    },
-    'Cluster Mine': {
-      text: '<strong>Types:</strong> Device, Mine %LINEBREAK%   A Cluster Mine Set consists of 3 individual Cluster Mine devices. %LINEBREAK% When a Cluster Mines set is placed, the center Cluster Mine is placed as normal, then two additional Cluster Mines are placed in the recesses as shown. %LINEBREAK% After a ship overlaps or moves through any individual Cluster Mine, it detonates. Other Cluster Mines in the set that were not overlapped or moved through do not detonate. %LINEBREAK% When each of these devices detonates, that ship rolls 2 attack dice. That ship then suffers 1 %HIT%/%CRIT% damage for each matching result.'
-    },
-    'Ion Bomb': {
-      text: '<strong>Types:</strong> Device, Bomb %LINEBREAK% At the end of the Activation Phase, this device detonates. When this device detonates, each ship at range 0–1 gains 3 ion tokens, and each remote at range 0–1 suffers 1 %HIT% damage.'
-    },
-    'Concussion Bomb': {
-      text: '<strong>Types:</strong> Device, Bomb %LINEBREAK% At the end of the Activation Phase, this device detonates. When this device detonates, each ship and remote at range 0–1 is dealt 1 facedown damage card. Then, each ship at range 0–1 must expose 1 damage card unless it chooses to gain 1 strain token.'
-    },
-    'Thermal Detonator': {
-      text: '<strong>Types:</strong> Device, Bomb %LINEBREAK% At the end of the Activation Phase, this device detonates. When this device detonates, each ship and remote at range 0–1 rolls 1 attack die. Each ship gains 1 strain token for each %FOCUS% result, and each ship and remote suffers 1 %HIT%/%CRIT% damage for each matching result.'
-    },
-    'Sensor Buoy': {
-      text: 'INIT: 0 <br>AGILITY: 3 <br>HULL: 2 %LINEBREAK% <strong>Types:</strong> Device, Remote %LINEBREAK% Sensor buoys are remotes that come in pairs (one red, and one blue, each with its own remote card), and are placed by the <strong>Sensor Buoy Suite</strong> upgrade card. Beyond being remotes and interacting with that card, they have no additional rules.'
-    },
-    'Electro-Chaff Cloud': {
-      text: 'An electro-chaff cloud is a device and an obstacle. %LINEBREAK% During the End Phase, remove each electro-chaff cloud with no fuse markers, then remove one fuse marker from each electro-chaff cloud. An electro-chaff cloud can never have more than one fuse token.'
-    },
-    'Tracking Torpedoes': {
-      text: 'INIT: 0 <br>AGILITY: 3 <br>HULL: 3 %LINEBREAK% <strong>System Phase:</strong> At this remote\'s initiative, its controlling player relocates this remote forward using the [3 %BANKLEFT%], [3 %BANKRIGHT%], or [4 %STRAIGHT%] template. %LINEBREAK% <strong>Activation Phase:</strong> No effect. %LINEBREAK% <strong>Engagement Phase:</strong> At this remote’s initiative, if an object on which it has a lock is in its %FRONTARC% at range 0–1, this remote detonates. End Phase: During the End Phase, if this remote does not have a lock on any object, this remote must acquire a lock on an object in its %FRONTARC% at range 1–3, if able. %LINEBREAK% <strong>Other Rules:</strong> After this remote is destroyed, roll 1 attack die. On a %HIT% or %CRIT% result, this remote detonates. %LINEBREAK% When this remote detonates, each ship, remote, and structure at range 0 or in its %FRONTARC% at range 1 rolls 4 attack dice and suffers 1 damage for each matching %HIT% or %CRIT% result.'
-    },
-    'Fearful Prey': {
-      text: 'After you defend against an enemy <strong>Fearsome Predator</strong>, if you did not spend at least 1 green token during the attack, gain 1 strain token.'
-    },
-    'You Should Thank Me': {
-      text: 'This condition is assigned facedown. Reveal it after you defend. %LINEBREAK% After you defend, <strong>Zam Wesell</strong> recovers 1 %CHARGE%. Then, you may acquire a lock on the attacker. %LINEBREAK% At the end of the Engagement Phase, if this card is facedown and you are in an enemy ship\'s firing arc, you may reveal this card and spend 2 %CHARGE% from <strong>Zam Wesell</strong>. If you do, you may perform a bonus attack. %LINEBREAK% At the start of the System Phase, remove this condition.'
-    },
-    'You\'d Better Mean Business': {
-      text: 'This condition is assigned facedown. Reveal it after you defend. %LINEBREAK% After you defend, you may spend 2 %CHARGE% from <strong>Zam Wesell</strong>. If you do, perform a bonus attack against the attacker. %LINEBREAK% At the end of the Engagement Phase, if this card is facedown and you are in an enemy ship\'s firing arc, you may reveal this card. If you do, <strong>Zam Wesell</strong> recovers 2 %CHARGE%. %LINEBREAK% At the start of the System Phase, remove this condition.'
-    },
-    'Merciless Pursuit': {
-      text: 'After you perform an attack, if the defender is equipped with <b>The Child</b>, you may acquire a lock on the defender.'
-    },
-    'Marked for Elimination': {
-      text: 'While you defend, if the attacker is equipped with <b>Tracking Fob</b> and has a lock on you, you cannot spend green tokens.'
-    },
-    'False Friend': {
-      text: 'During the System Phase, if an enemy ship with the <b>Tal Merrik</b> upgrade is at range 0-2 or an enemy remote is at range 0-2, flip your dial faceup. %LINEBREAK% <strong>Action:</strong> Gain 1 deplete token and stress token to discard this condition.'
-    },
-    'Trials of the Darksaber': {
-      text: 'While you perform an attack at attack range 0-2, you may spend 1 %CRIT% result. If you do, if the defending ship\'s player has scored more %POINT% than you, they lose 1 scored %POINT%. Place thatt %POINT% on this card. %LINEBREAK% After you defend, if you are destroyed by an enemy ship at attack range 0-2, assign the <b>Trials of the Darksaber</b> condition to the attacker (all %POINT% remain on this card). %LINEBREAK%. At the end of the game, this ship scores all %POINT% on this card.'
-    },
-    'Blaze Bomb': {
-      text: '<strong>Types:</strong> Device, Bomb %LINEBREAK% At the end of the Activation Phase, this device detonates. %LINEBREAK% When this device detonates, each ship and remote at range 0-1 rolls 1 attack die. Each ship or remote suffers 1 %HIT% damage for each %HIT%/%CRIT% result. %LINEBREAK% After this devices detonates, place a Blace by aligning the Blaze\'s guides to the device\'s tab. %LINEBREAK% A Blaze is an obstacle. After this obstacle is placed, place a fues marker on it. %LINEBREAK% During the End Phase, remove each Blaze with no fuse markers, then remove 1 fuse marker from each Blaze.'
-    },
-    'Clan Wren Commandos': {
-      text: 'INIT: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, RANGE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Types:</strong> Device, Remote %LINEBREAK% After an enemy ship overlaps you, it gains 1 strain token. %LINEBREAK% <strong>Activation Phase:</strong> At the start of this phase, you may relocate forward using a [1 %TURNLEFT%], [2 %STRAIGHT%], or [1 %TURNRIGHT%] template.%LINEBREAK% <strong>Engagement Phase:</strong> You cannot attack if there are enemy ships at range 0. To perform an attack, you must spend 1 %CHARGE%. While you perform an attack, you may change 1 %FOCUS% result to a %HIT% result.'
-    },
-    'Death Watch Commandos': {
-      text: 'INIT: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, RANGE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Types:</strong> Device, Remote %LINEBREAK% After an enemy ship overlaps you, it gains 1 strain token.%LINEBREAK% <strong>Activation Phase:</strong> At the start of this phase, you may relocate forward using a [1 %TURNLEFT%], [2 %STRAIGHT%], or [1 %TURNRIGHT%] template.%LINEBREAK% <strong>Engagement Phase:</strong> You cannot attack if there are enemy ships at range 0. To perform an attack, you must spend 1 %CHARGE%. While you perform an attack, you may change 1 %FOCUS% result to a %HIT% result.'
-    },
-    'Nite Owl Commandos': {
-      text: 'INIT: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, RANGE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Types:</strong> Device, Remote %LINEBREAK% After an enemy ship overlaps you, it gains 1 strain token.%LINEBREAK% <strong>Activation Phase:</strong> At the start of this phase, you may relocate forward using a [1 %TURNLEFT%], [2 %STRAIGHT%], or [1 %TURNRIGHT%] template.%LINEBREAK% <strong>Engagement Phase:</strong> You cannot attack if there are enemy ships at range 0. To perform an attack, you must spend 1 %CHARGE%. While you perform an attack, you may change 1 %FOCUS% result to a %HIT% result.'
-    },
-    'Imperial Super Commandos': {
-      text: 'INIT: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, RANGE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Types:</strong> Device, Remote %LINEBREAK% After an enemy ship overlaps you, it gains 1 strain token.%LINEBREAK% <strong>Activation Phase:</strong> At the start of this phase, you may relocate forward using a [1 %TURNLEFT%], [2 %STRAIGHT%], or [1 %TURNRIGHT%] template.%LINEBREAK% <strong>Engagement Phase:</strong> You cannot attack if there are enemy ships at range 0. To perform an attack, you must spend 1 %CHARGE%. While you perform an attack, you may change 1 %FOCUS% result to a %HIT% result.'
-    },
-    'Mandalorian Super Commandos': {
-      text: 'INIT: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, RANGE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Types:</strong> Device, Remote %LINEBREAK% After an enemy ship overlaps you, it gains 1 strain token.%LINEBREAK% <strong>Activation Phase:</strong> At the start of this phase, you may relocate forward using a [1 %TURNLEFT%], [2 %STRAIGHT%], or [1 %TURNRIGHT%] template.%LINEBREAK% <strong>Engagement Phase:</strong> You cannot attack if there are enemy ships at range 0. To perform an attack, you must spend 1 %CHARGE%. While you perform an attack, you may change 1 %FOCUS% result to a %HIT% result.'
-    }
-  };
-  for (name in pilot_translations) {
-    data = pilot_translations[name];
-    if (data.display_name == null) {
-      data['display_name'] = name;
-    }
-  }
-  for (name in upgrade_translations) {
-    data = upgrade_translations[name];
-    if (data.display_name == null) {
-      data['display_name'] = name;
-    }
-  }
-  for (name in condition_translations) {
-    data = condition_translations[name];
-    if (data.display_name == null) {
-      data['display_name'] = name;
-    }
-  }
-  return exportObj.setupTranslationCardData(pilot_translations, upgrade_translations, condition_translations);
 };
+
+({
+  "Scavenged Upgrade": {
+    text: "<strong>Setup:</strong> Before you deploy, select one of the following upgrades at random and equip it (ignoring all requirements and without paying its upgrade cost): %LINEBREAK% Deadman's Switch, BT-1, Ion Limiter Override, Pattern Analyzer, Heavy Laser Cannon, Collision Detector, Hondo Ohnaka, GNK 'Gonk' Droid"
+  },
+  "Prototype G-Diffuser": {
+    text: "After you fully execute a sideslip, you may spend 1 %CHARGE%. If you do, remove all of your stress tokens, then gain strain tokens equal to twice the amount of stress tokens removed this way."
+  },
+  "Overclocked Hyperdrive": {
+    text: "<strong>Setup:</strong> Start in reserve. %LINEBREAK% At the end of Setup, randomly select an objective token. Deploy from that objective token instead, inserting the [1 %STRAIGHT%] template into either set of guides and aligning it with your rear guides."
+  },
+  "Defective Jawaball": {
+    text: "During the System Phase, you may spend 1 %CHARGE% to launch a Defective Jawaball using the [1 %STRAIGHT%] template. %LINEBREAK% <i>The Defective Jawaball is a marker, not a device, so it cannot be fused and it does not interact with effects such as Feedback Ping.</i>"
+  },
+  "Admiral Ozzel": {
+    display_name: "Admiral Ozzel",
+    text: "While a friendly large or huge ship at range 0-3 executes a maneuver, it may suffer 1 %HIT% damage to execute a maneuver of the same bearing and difficulty of a speed 1 higher or lower instead."
+  },
+  "Azmorigan": {
+    display_name: "Azmorigan",
+    text: "During the End Phase, you may choose up to 2 friendly ships at range 0-1. If you do, each of these ships does not remove 1 calculate or evade token."
+  },
+  "Captain Needa": {
+    display_name: "Captain Needa",
+    text: "After a friendly ship at range 0-4 reveals its dial, you may spend 1 %CHARGE%. If you do, it sets its dial to another maneuver of the same difficulty and speed."
+  },
+  "Strategic Commander": {
+    display_name: "Strategic Commander",
+    text: "After a friendly ship at range 0-4 reveals its dial, you may spend 1 %CHARGE%. If you do, it sets its dial to another maneuver of the same difficulty and speed."
+  },
+  "Carlist Rieekan": {
+    display_name: "Carlist Rieekan",
+    text: "After a friendly ship at range 0-2 is destroyed, you may choose a friendly ship at range 0-2. If you do, it may perform a red %EVADE% action."
+  },
+  "Jan Dodonna": {
+    display_name: "Jan Dodonna",
+    text: "Friendly ships at range 0-3 can spend your focus and evade tokens."
+  },
+  "Raymus Antilles": {
+    display_name: "Raymus Antilles",
+    text: "After you are destroyed, each friendly ship at range 0-1 gains 1 focus token. After you are destroyed, you are not removed until the end of the End Phase."
+  },
+  "Stalwart Captain": {
+    display_name: "Stalwart Captain",
+    text: "After you are destroyed, you are not removed until the end of the End Phase."
+  },
+  "Agent of the Empire": {
+    display_name: "Agent of the Empire",
+    text: "You are a <strong>wing leader</strong>. Your wingmates must be 2, 3, 4, or 5 TIE/ln fighters. %LINEBREAK% While you defend, up to 2 of your wingmates in the attack arc may suffer 1 %HIT% or %CRIT% damage to cancel a matching result."
+  },
+  "First Order Elite": {
+    display_name: "First Order Elite",
+    text: "You are a <strong>wing leader</strong>. Your wingmates must be 2 or 3 TIE/fo fighters or TIE/sf fighters. %LINEBREAK% While you defend, up to 2 of your wingmates in the attack arc may suffer 1 %HIT% or %CRIT% damage to cancel a matching result."
+  },
+  "Veteran Wing Leader": {
+    display_name: "Veteran Wing Leader",
+    text: "You are a <strong>wing leader</strong>. Your wingmates must be 2, 3, 4, or 5 other ships of your ship type. %LINEBREAK% While you defend, up to 2 of your wingmates in the attack arc may suffer 1 %HIT% or %CRIT% damage to cancel a matching result."
+  },
+  "Dreadnought Hunter": {
+    display_name: "Dreadnought Hunter",
+    text: "While you perform an attack against a huge ship, if the attack deals a faceup damage card to the defender and the defender is in your %BULLSEYEARC%, you may apply the <strong>Precision Shot</strong> effect even if you are not in the specified arc."
+  },
+  "Ion Cannon Battery": {
+    display_name: "Ion Cannon Battery",
+    text: "<strong>Online: </strong> Setup: Equip this side faceup.%LINEBREAK% Bonus Attack: Spend 1 %ENERGY%. If this attack hits, the defender suffers 1 %CRIT% damage, and all %HIT%/%CRIT% results inflict ion tokens instead of damage. %LINEBREAK%<strong>Offline: </strong> %LINEBREAK% After you engage, you may spend 2 %ENERGY% to flip this card."
+  },
+  "Targeting Battery": {
+    display_name: "Targeting Battery",
+    text: "<strong>Online: </strong> Setup: Equip this side faceup.%LINEBREAK% Bonus Attack: Spend 1 %ENERGY%. After you perform this attack, you may acquire a lock on the defender. %LINEBREAK%<strong>Offline: </strong> %LINEBREAK% After you engage, you may spend 2 %ENERGY% to flip this card."
+  },
+  "Ordnance Tubes": {
+    display_name: "Ordnance Tubes",
+    text: "<strong>Online: </strong> Setup: Equip this side faceup. %LINEBREAK% You can perform %TORPEDO% and %MISSILE% attacks only as bonus attacks. You <strong>must</strong> treat the %FRONTARC% requirement of your equipped %TORPEDO% and %MISSILE% upgrades as %FULLFRONTARC%. %LINEBREAK% Bonus Attack: Perform a %TORPEDO% attack. %LINEBREAK% Bonus Attack: Perform a %MISSILE% attack. %LINEBREAK%<strong>Offline: </strong> %LINEBREAK% You must treat the %FRONTARC% requirement of your equipped %TORPEDO% and %MISSILE% upgrades as %BULLSEYEARC%. %LINEBREAK% Action: Spend 2 %ENERGY% to flip this card."
+  },
+  "Point-Defense Battery": {
+    display_name: "Point-Defense Battery",
+    text: "<strong>Online: </strong> Setup: Equip this side faceup. %LINEBREAK% Bonus Attack: Spend 1 %ENERGY%. %LINEBREAK% Bonus Attack: Spend 1 %ENERGY%. %LINEBREAK% Bonus Attack: Spend 1 %ENERGY%. %LINEBREAK% Bonus Attack: Spend 1 %ENERGY%. %LINEBREAK%<strong>Offline: </strong> %LINEBREAK% After you engage, you may spend 2 %ENERGY% to flip this card."
+  },
+  "Turbolaser Battery": {
+    display_name: "Turbolaser Battery",
+    text: "<strong>Online: </strong> Setup: Equip this side faceup.%LINEBREAK% Bonus Attack (%LOCK%): Spend 3 %ENERGY%. If this attack hits, add 3 %HIT% results. %LINEBREAK% <strong>Offline: </strong> %LINEBREAK% After you engage, you may spend 2 %ENERGY% to flip this card."
+  },
+  "Bombardment Specialists": {
+    display_name: "Bombardment Specialists",
+    text: "While you perform an attack, you may spend 1 calculate token to increase or decrease the range requirement by 1, to a limit of 0-5."
+  },
+  "Comms Team": {
+    display_name: "Comms Team",
+    text: "After you perform a %COORDINATE% action, you may spend up to 2 %ENERGY% to coordinate that many additional ships at range 0-1 of the ship you coordinated."
+  },
+  "IG-RM Droids": {
+    display_name: "IG-RM Droids",
+    text: "While you perform an attack, if you are calculating, you may change 1 %HIT% result to a %CRIT% result."
+  },
+  "Gunnery Specialists": {
+    display_name: "Gunnery Specialists",
+    text: "While you perform a primary or %HARDPOINT% attack, you may spend 1 or more %ENERGY% to reroll that many attack dice."
+  },
+  "Damage Control Team": {
+    display_name: "Damage Control Team",
+    text: "Before you engage, you may spend 1 or more %ENERGY% to flip that many of your <strong>Offline</strong> upgrade cards.%LINEBREAK% Action: Spend 1 or more %ENERGY% to repair that many of your faceup <strong>Ship</strong> damage cards."
+  },
+  "Ordnance Team": {
+    display_name: "Ordnance Team",
+    text: "While you perform a %RELOAD% action, you may spend up to 3 %ENERGY% to reload that many additional %CHARGE% on your equipped %MISSILE%/%TORPEDO% upgrades. %LINEBREAK% After you perform a %RELOAD% action, you may spend 1 %ENERGY% to remove 1 disarm token."
+  },
+  "Sensor Experts": {
+    display_name: "Sensor Experts",
+    text: "You can maintain up to 3 locks on different objects. %LINEBREAK% After you perform a %LOCK% action, you may spend up to 2 %ENERGY% to acquire a lock on that many other objects at range 0-1 of the object you locked, ignoring range restrictions."
+  },
+  "Quick-Release Locks": {
+    display_name: "Quick-Release Locks",
+    text: "During the System Phase, you may spend 1 %CHARGE% to place 1 cargo crate drift in your %REARARC% at range 0. It cannot overlap a ship this way.%LINEBREAK% This card's %CHARGE% cannot be recovered."
+  },
+  "Saboteur's Map": {
+    display_name: "Saboteur's Map",
+    text: "At the end of Setup, you may spend up to 1 %CHARGE% from each of your equipped <strong>Mine</strong> upgrades to place the corresponding device in the play area beyond range 2 of any enemy ship, strategic marker, or other device."
+  },
+  "Scanner Baffler": {
+    display_name: "Scanner Baffler",
+    text: "At the end of Setup, you may choose any number of other friendly, non-huge ships in your deployment area at range 0-1. If you do, place those ships anywhere in the same deployment area."
+  },
+  "Adaptive Shields": {
+    display_name: "Adaptive Shields",
+    text: "While another friendly ship at range 0-1 defends, if it is a smaller size than you, you may spend 1 shield or 2 %ENERGY% to cancel 1 %HIT% or %CRIT% result."
+  },
+  "Boosted Scanners": {
+    display_name: "Boosted Scanners",
+    text: "While you lock, coordinate, or jam, you may spend up to 3 %ENERGY% to increase the range at which you can choose an object by 1 per %ENERGY% spent this way, to a maximum of range 5."
+  },
+  "Optimized Power Core": {
+    display_name: "Optimized Power Core",
+    text: "After you execute a blue maneuver, recover 1 %ENERGY%."
+  },
+  "Tibanna Reserves": {
+    display_name: "Tibanna Reserves",
+    text: "Action: Spend 1 %CHARGE% to recover 2 %ENERGY%."
+  },
+  "Toryn Farr": {
+    display_name: "Toryn Farr",
+    text: "After you coordinate a friendly ship, it may acquire a lock on a ship you are locking, ignoring range restrictions."
+  },
+  "Dodonna's Pride": {
+    display_name: "Dodonna's Pride",
+    text: " "
+  },
+  "Jaina's Light": {
+    display_name: "Jaina's Light",
+    text: "While a friendly ship at range 0-2 defends, if the attack is obstructed by an obstacle, you may spend 1 %ENERGY%. If you do, the defender rolls 1 additional defense die."
+  },
+  "Liberator": {
+    display_name: "Liberator",
+    text: "You can dock up to 2 small ships. %LINEBREAK% After a ship deploys from you, it may perform a %FOCUS% or %BARRELROLL% action."
+  },
+  "Tantive IV": {
+    display_name: "Tantive IV",
+    text: "While you defend, if the attacker is in your %REARARC%, you may roll 1 additional defense die."
+  },
+  "Thunderstrike": {
+    display_name: "Thunderstrike",
+    text: "While you perform a bonus attack, if you have not attacked the defender this round, you may reroll 1 attack die."
+  },
+  "Bright Hope": {
+    display_name: "Bright Hope",
+    text: "You can reinforce only your %FULLFRONTARC%. %LINEBREAK% While you defend, if you are reinforced and the attacker is in your %FULLFRONTARC%, you may roll 1 additional defense die."
+  },
+  "Luminous": {
+    display_name: "Luminous",
+    text: "Setup: You are placed in reserve. %LINEBREAK% At the end of setup, you are placed in the play area at range 0-2 of a friendly ship."
+  },
+  "Quantum Storm": {
+    display_name: "Quantum Storm",
+    text: "After you fully execute a white maneuver, recover 1 %ENERGY%."
+  },
+  "Assailer": {
+    display_name: "Assailer",
+    text: "While you defend, if the attack range is 1, you may roll 1 additional defense die."
+  },
+  "Corvus": {
+    display_name: "Corvus",
+    text: "You can dock up to 2 small ships. %LINEBREAK% After you perform a %CALCULATE% action, gain 1 calculate token."
+  },
+  "Impetuous": {
+    display_name: "Impetuous",
+    text: "After you perform an attack, if the defender was destroyed, you may perform a %FOCUS% or %LOCK% action."
+  },
+  "Instigator": {
+    display_name: "Instigator",
+    text: "While you perform an attack, if the defender has an orange or red token, you may reroll up to 2 attack dice."
+  },
+  "Blood Crow": {
+    display_name: "Blood Crow",
+    text: "While you perform an attack at attack range 1-2, you may add 1 %FOCUS% result."
+  },
+  "Requiem": {
+    display_name: "Requiem",
+    text: "After a ship deploys from you, it may acquire a lock on one ship you are locking, ignoring range restrictions."
+  },
+  "Suppressor": {
+    display_name: "Suppressor",
+    text: "After you coordinate a friendly ship, you may spend 1 %ENERGY% to jam an enemy ship at range 0-2 of that ship, ignoring range restrictions."
+  },
+  "Vector": {
+    display_name: "Vector",
+    text: "After a ship deploys from you, it may perform a %EVADE% or %BOOST% action."
+  },
+  "Broken Horn": {
+    display_name: "Broken Horn",
+    text: "If you are damaged, reduce the difficulty of your speed 3-5 maneuvers."
+  },
+  "Merchant One": {
+    display_name: "Merchant One",
+    text: "Bonus Attack: Perform a %TURRET% attack."
+  },
+  "Insatiable Worrt": {
+    display_name: "Insatiable Worrt",
+    text: "During the End Phase, you may recover 1 additional shield or 1 additional %ENERGY%."
+  },
+  "Corsair Refit": {
+    display_name: "Corsair Refit",
+    text: "Bonus Attack: Spend 1 %ENERGY% to perform a %CANNON%, %TURRET%, or %MISSILE% attack."
+  },
+  "Enhanced Propulsion": {
+    display_name: "Enhanced Propulsion",
+    text: "<strong>Setup:</strong> Equip this side faceup.%LINEBREAK% At the start of the End Phase, you may spend 2 %ENERGY% to execute a white [2 %STRAIGHT%], [1 %BANKLEFT%], or [1 %BANKRIGHT%] maneuver. %LINEBREAK% "
+  },
+  "Drill Beak": {
+    display_name: "Drill Beak",
+    text: "<strong>Setup:</strong> Equip this side faceup.%LINEBREAK% You can preform this attack at range 0.\n%LINEBREAK% <strong>Bonus Attack:</strong> Spend 1 %ENERGY%. If the attack range is 0, change all %HIT% results to %CRIT% results."
+  },
+  "Tractor Tentacles": {
+    display_name: "Tractor Tentacles",
+    text: "<strong>Setup:</strong> Equip this side faceup.\n%LINEBREAK% <strong>Bonus Attack</strong> %LINEBREAK% <strong>Bonus Attack:</strong> Spend 1 %ENERGY%. %LINEBREAK% <strong>Bonus Attack:</strong> Spend 1 %ENERGY%. %LINEBREAK% <strong>Bonus Attack:</strong> Spend 1 %ENERGY%."
+  },
+  "Tracking Torpedoes": {
+    display_name: "Tracking Torpedoes",
+    text: "During the System Phase, you may spend up to 3 %CHARGE% to launch that many tracking torpedoes using the [%BANKLEFT% 3], [%STRAIGHT% 4], and [%BANKRIGHT% 3] templates. Each device must use a seperate tempalte. Then each device may acquire a lock on an object you have locked, ignoring range restrictions.%LINEBREAK% This card's %CHARGE% cannot be recovered."
+  },
+  "Proton Cannon Battery": {
+    display_name: "Proton Cannon Battery",
+    text: "<strong>Setup:</strong> Equip this side faceup.\n%LINEBREAK% <strong>Bonus Attack:</strong> Change 1 %HIT% result to a %CRIT% result. %LINEBREAK% <strong>Bonus Attack:</strong> Spend 1 %ENERGY%. Change 1 %HIT% result to a %CRIT% result."
+  },
+  "Tractor Technicians": {
+    display_name: "Tractor Technicians",
+    text: "During the End Phase, each other ship at range 0-1 cannot remove its tractor tokens. %LINEBREAK% Before a tractored enemy ship at range 0-1 reveals its dial, you may spend 1 %ENERGY%. If you do, while that ship executes its maneuver this activation, it reduces the speed of that maneuver by 1, to a minimum of 1."
+  },
+  "Asajj Ventress (Command)": {
+    display_name: "Asajj Ventress",
+    text: "During the System Phase, you may spend 1 %FORCE%. IF you do, each enemy ship in your %FRONTARC% at range 0-1 gains 1 strain token unless it chooses to gain 1 jam token."
+  },
+  "Hondo Ohnaka (Command)": {
+    display_name: "Hondo Ohnaka",
+    text: "During the System Phase, you may spend 1 %CHARGE% and choose 1 friendly shiop at range 0-1. Move 1 Victory Token or Objective Token from its ship card to your ship card, or from your ship card to its ship card."
+  },
+  "Zealous Captain": {
+    display_name: "Zealous Captain",
+    text: "During the Engagement Phase, at initiative 4, you may spend 1 %ENERGY% to perform a bonus %HARDPOINT% attack."
+  },
+  "General Grievous (Command)": {
+    display_name: "General Grievous",
+    text: "During the Engagement Phase, at initiative 4, you may spend 1 %ENERGY% to perform a bonus %HARDPOINT% attack. %LINEBREAK% You can perform attacks against friendly ships. %LINEBREAK% After you perform an attack, if the defender was destroyed, each friendly ship at range 0-2 of it may perform a %CALCULATE% action."
+  },
+  "Mar Tuuk": {
+    display_name: "Mar Tuuk",
+    text: "<strong>Setup:</strong> After placing forces, choose 1 friendly wing of ships with %CALCULATE% on their action bars and place that wing in reserve. %LINEBREAK% During the End Phase, you may place that wing within your deployment area or beyond range 2 of any enemy shp. Then you may choose 1 enemy ship at range 0-1 of you; each ship in that wing acquires a lock on it."
+  },
+  "Riff Tamson": {
+    display_name: "Riff Tamson",
+    text: "During the Engagement Phase, at initiative 5, you may spend 1 %ENERGY% to perform a bonus %HARDPOINT% attack. %LINEBREAK% After you perform an attack, if the defender was dealt 1 or more faceup damage cards, it gains 2 strain tokens."
+  },
+  "Corsair Crew": {
+    display_name: "Corsair Crew",
+    text: "While you perform an attack against a standard ship, you may spend 1 %HIT% result. If you do, the defender gains 1 deplete token."
+  },
+  "Grappler": {
+    display_name: "Grappler",
+    text: "While you perform a <b>Drill Beak</b> attack, at range 1, if the defender is tractored, treat it as being range 0 instead."
+  },
+  "Nautolan's Revenge": {
+    display_name: "Nautolan's Revenge",
+    text: "Before you engage, you may spend up to 2 calculate tokens. If you do, recover that many %ENERGY%."
+  },
+  "Droid Crew": {
+    display_name: "Droid Crew",
+    text: "While you perform a white %FOCUS% action, treat it as red instead. %LINEBREAK% At the start of the End Phase, repair all of your faceup <b>Crew</b> damage cards."
+  },
+  "Trident": {
+    display_name: "Trident",
+    text: "After you overlap a ship or a ship overlaps you, if it is not tractored, you may spend 1 %ENERGY%. If you do, it gains 3 tractor tokens."
+  },
+  "Neimoidian Grasp": {
+    display_name: "Neimoidian Grasp",
+    text: "After you perform an attack, you may perform a red  %EVADE% action. While you defend, if you are evading, you may roll 1 addtional defense die."
+  }
+});
+
+condition_translations = {
+  'Suppressive Fire': {
+    text: 'While you perform an attack against a ship other than <strong>Captain Rex</strong>, roll 1 fewer attack die. %LINEBREAK% After <strong>Captain Rex</strong> defends, remove this card.  %LINEBREAK% At the end of the Combat Phase, if <strong>Captain Rex</strong> did not perform an attack this phase, remove this card. %LINEBREAK% After <strong>Captain Rex</strong> is destroyed, remove this card.'
+  },
+  'Hunted': {
+    text: 'After you are destroyed, you must choose another friendly ship and assign this condition to it, if able.'
+  },
+  'Listening Device': {
+    text: 'During the System Phase, if an enemy ship with the <strong>Informant</strong> upgrade is at range 0-2, flip your dial faceup.'
+  },
+  'Rattled': {
+    text: 'After a bomb or mine at range 0-1 detonates, suffer 1 %CRIT%. Then, remove this card. %LINEBREAK% Action: If there are no bombs or mines at range 0-1, remove this card.'
+  },
+  'Optimized Prototype': {
+    text: 'While you perform a %FRONTARC% primary attack against a ship locked by a friendly ship with the <strong>Director Krennic</strong> upgrade, you may spend 1 %HIT%/%CRIT%/%FOCUS% result. If you do, choose one: the defender loses 1 shield or the defender flips 1 of its facedown damage cards.'
+  },
+  'I\'ll Show You the Dark Side': {
+    text: ' When this card is assigned, if there is no faceup damage card on it, the player who assigned it searches the damage deck for 1 Pilot damage card and places it faceup on this card. Then shuffle the damage deck. When you would suffer 1 %CRIT% damage, you are instead dealt the faceup damage card on this card. Then, remove this card. '
+  },
+  'Proton Bomb': {
+    text: '<strong>Types:</strong> Device, Bomb %LINEBREAK% At the end of the Activation Phase, this device detonates. When this device detonates, each ship and remote at range 0–1 suffers 1 %CRIT% damage.%LINEBREAK%<i>Errata (Official Rulings Thread 03/2019): Added: "and remote"</i>'
+  },
+  'Seismic Charge': {
+    text: '<strong>Types:</strong> Device, Bomb %LINEBREAK% At the end of the Activation Phase this device detonates. When this device detonates, choose 1 obstacle at range 0–1. Each ship and remote at range 0–1 of the obstacle suffers 1 %HIT% damage. Then remove that obstacle.%LINEBREAK%<i>Errata (Official Rulings Thread 03/2019): Added: "and remote"</i> '
+  },
+  'Bomblet': {
+    text: '<strong>Types:</strong> Device, Bomb %LINEBREAK% At the end of the Activation Phase this device detonates. When this device detonates, each ship and remote at range 0–1 rolls 2 attack dice. Each ship and remote suffers 1 %HIT% damage for each %HIT%/%CRIT% result.%LINEBREAK%<i>Errata (Official Rulings Thread 03/2019): Added: "and remote"</i>'
+  },
+  'Loose Cargo': {
+    text: '<strong>Types:</strong> Obstacle, Placed %LINEBREAK% Loose cargo is a debris cloud.'
+  },
+  'Spare Parts': {
+    text: '<strong>Types:</strong> Obstacle, Placed %LINEBREAK% Spare parts is a debris cloud. %LINEBREAK% When this object is dropped, fit the tab between the ship’s rear guides.'
+  },
+  'Conner Net': {
+    text: '<strong>Types:</strong> Device, Mine %LINEBREAK% After a ship overlaps or moves through this device, it detonates. When this device detonates, the ship suffers 1 %HIT% damage and gains 3 ion tokens.'
+  },
+  'Proximity Mine': {
+    text: '<strong>Types:</strong> Device, Mine %LINEBREAK% After a ship overlaps or moves through this device, it detonates. When this device detonates, that ship rolls 2 attack dice. That ship then suffers 1 %HIT% plus 1 %HIT%/%CRIT% damage for each matching result.%LINEBREAK%<i>Errata (since rules reference 1.0.2): Added: "1 %HIT% plus"</i>'
+  },
+  'DRK-1 Probe Droid': {
+    text: 'INIT: 0 <br>AGILITY: 3 <br>HULL: 1 %LINEBREAK% <strong>Types:</strong> Device, Remote %LINEBREAK%  <strong>System Phase:</strong> The DRK-1 probe droid’s controlling player may choose a [2 %BANKLEFT%], [2 %STRAIGHT%] or [2 %BANKRIGHT%] template and any set of the DRK-1’s guides. The player then relocates the remote, placing the DRK-1 at the other end of the template. It can be placed overlapping an object this way. %LINEBREAK%If the DRK-1 overlaps a ship, use the position marker to denote the ship’s position, then place the ship on top of the remote. %LINEBREAK%<strong>Activation, Engagement, and End Phase:</strong> No effect. %LINEBREAK%<strong>Other Rules:</strong> While a ship locks an object or jams an enemy ship, it may measure range from a friendly DRK-1 probe droid. After an enemy ship executes a maneuver that causes it to overlap a DRK-1 probe droid, the ship’s controller rolls 1 attack die. On a %FOCUS% result, the DRK-1 probe droid suffers 1 %HIT% damage.'
+  },
+  'Buzz Droid Swarm': {
+    text: 'INIT: 0 <br>AGILITY: 1 <br>HULL: 1 %LINEBREAK% <strong>Types:</strong> Device, Remote %LINEBREAK% <strong>System, Activation, and End Phase:</strong> No effect. %LINEBREAK%<strong>Engagement Phase:</strong> When you engage, each enemy ship at range 0 of the buzz droid swarm suffers 1 %CRIT% damage. %LINEBREAK%<strong>Other Rules:</strong> After an enemy ship overlaps or moves through a buzz droid swarm, the swarm’s controlling player relocates it by aligning the tab to that ship’s front or rear guides (this ship is at range 0 of the swarm). The swarm cannot be aligned to a set of the ship’s guides if doing so would cause it to overlap an object. If the swarm cannot be placed at a chosen set of guides, its controlling player must align it to the other set of the ship’s guides. If it cannot be aligned to the other set, the swarm and the enemy ship that overlapped or moved through it each suffer 1 %HIT% damage. %LINEBREAK%<i>Errata (since rules reference 1.4): Agility adjusted for balance.</i>'
+  },
+  'It\'s the Resistance': {
+    text: '<strong>Setup:</strong> Start in reserve. %LINEBREAK% When you deploy, you are placed within range 1 of any table edge and beyond range 3 of any enemy ship. %LINEBREAK% At the start of the round, if all of the friendly <strong>GA-97</strong>\'s %CHARGE% are active, you <strong>must</strong> deploy. Then remove this card. After the friendly <strong>GA-97</strong> is destroyed, you <strong>must</strong> deploy. Then gain 1 disarm token and remove this card.'
+  },
+  'Electro-Proton Bomb': {
+    text: '<strong>Types:</strong> Device, Bomb %LINEBREAK%  At the end of the Activation Phase this device detonates. When this device detonates, each ship and remote at range 0–2 rolls 4 attack dice. Each ship loses 1 shield for each blank result, gains 1 ion token for each %FOCUS%/%HIT% result, and gains 1 disarm token for each %CRIT% result. Each remote at range 0–1 loses 1 shield for each blank result and suffers 1 damage for each %FOCUS%/%HIT% result.'
+  },
+  'Decoyed': {
+    text: 'While you defend, each friendly <strong>Naboo Handmaiden</strong> in the attack arc may spend 1 evade token to change one of your results to an %EVADE% result. %LINEBREAK% If you are a Naboo Royal N-1 Starfighter, each friendly <strong>Naboo Handmaiden</strong> in the attack arc may spend 1 evade token to add 1 %EVADE% result instead.'
+  },
+  'Compromising Intel': {
+    text: 'During the System Phase, if the enemy <strong>Vi Moradi</strong> is at range 0-3, flip your dial faceup. %LINEBREAK% While you defend or perform an attack against the enemy <strong>Vi Moradi</strong>, you cannot spend focus tokens.'
+  },
+  'Cluster Mine': {
+    text: '<strong>Types:</strong> Device, Mine %LINEBREAK%   A Cluster Mine Set consists of 3 individual Cluster Mine devices. %LINEBREAK% When a Cluster Mines set is placed, the center Cluster Mine is placed as normal, then two additional Cluster Mines are placed in the recesses as shown. %LINEBREAK% After a ship overlaps or moves through any individual Cluster Mine, it detonates. Other Cluster Mines in the set that were not overlapped or moved through do not detonate. %LINEBREAK% When each of these devices detonates, that ship rolls 2 attack dice. That ship then suffers 1 %HIT%/%CRIT% damage for each matching result.'
+  },
+  'Ion Bomb': {
+    text: '<strong>Types:</strong> Device, Bomb %LINEBREAK% At the end of the Activation Phase, this device detonates. When this device detonates, each ship at range 0–1 gains 3 ion tokens, and each remote at range 0–1 suffers 1 %HIT% damage.'
+  },
+  'Concussion Bomb': {
+    text: '<strong>Types:</strong> Device, Bomb %LINEBREAK% At the end of the Activation Phase, this device detonates. When this device detonates, each ship and remote at range 0–1 is dealt 1 facedown damage card. Then, each ship at range 0–1 must expose 1 damage card unless it chooses to gain 1 strain token.'
+  },
+  'Thermal Detonator': {
+    text: '<strong>Types:</strong> Device, Bomb %LINEBREAK% At the end of the Activation Phase, this device detonates. When this device detonates, each ship and remote at range 0–1 rolls 1 attack die. Each ship gains 1 strain token for each %FOCUS% result, and each ship and remote suffers 1 %HIT%/%CRIT% damage for each matching result.'
+  },
+  'Sensor Buoy': {
+    text: 'INIT: 0 <br>AGILITY: 3 <br>HULL: 2 %LINEBREAK% <strong>Types:</strong> Device, Remote %LINEBREAK% Sensor buoys are remotes that come in pairs (one red, and one blue, each with its own remote card), and are placed by the <strong>Sensor Buoy Suite</strong> upgrade card. Beyond being remotes and interacting with that card, they have no additional rules.'
+  },
+  'Electro-Chaff Cloud': {
+    text: 'An electro-chaff cloud is a device and an obstacle. %LINEBREAK% During the End Phase, remove each electro-chaff cloud with no fuse markers, then remove one fuse marker from each electro-chaff cloud. An electro-chaff cloud can never have more than one fuse token.'
+  },
+  'Tracking Torpedoes': {
+    text: 'INIT: 0 <br>AGILITY: 3 <br>HULL: 3 %LINEBREAK% <strong>System Phase:</strong> At this remote\'s initiative, its controlling player relocates this remote forward using the [3 %BANKLEFT%], [3 %BANKRIGHT%], or [4 %STRAIGHT%] template. %LINEBREAK% <strong>Activation Phase:</strong> No effect. %LINEBREAK% <strong>Engagement Phase:</strong> At this remote’s initiative, if an object on which it has a lock is in its %FRONTARC% at range 0–1, this remote detonates. End Phase: During the End Phase, if this remote does not have a lock on any object, this remote must acquire a lock on an object in its %FRONTARC% at range 1–3, if able. %LINEBREAK% <strong>Other Rules:</strong> After this remote is destroyed, roll 1 attack die. On a %HIT% or %CRIT% result, this remote detonates. %LINEBREAK% When this remote detonates, each ship, remote, and structure at range 0 or in its %FRONTARC% at range 1 rolls 4 attack dice and suffers 1 damage for each matching %HIT% or %CRIT% result.'
+  },
+  'Fearful Prey': {
+    text: 'After you defend against an enemy <strong>Fearsome Predator</strong>, if you did not spend at least 1 green token during the attack, gain 1 strain token.'
+  },
+  'You Should Thank Me': {
+    text: 'This condition is assigned facedown. Reveal it after you defend. %LINEBREAK% After you defend, <strong>Zam Wesell</strong> recovers 1 %CHARGE%. Then, you may acquire a lock on the attacker. %LINEBREAK% At the end of the Engagement Phase, if this card is facedown and you are in an enemy ship\'s firing arc, you may reveal this card and spend 2 %CHARGE% from <strong>Zam Wesell</strong>. If you do, you may perform a bonus attack. %LINEBREAK% At the start of the System Phase, remove this condition.'
+  },
+  'You\'d Better Mean Business': {
+    text: 'This condition is assigned facedown. Reveal it after you defend. %LINEBREAK% After you defend, you may spend 2 %CHARGE% from <strong>Zam Wesell</strong>. If you do, perform a bonus attack against the attacker. %LINEBREAK% At the end of the Engagement Phase, if this card is facedown and you are in an enemy ship\'s firing arc, you may reveal this card. If you do, <strong>Zam Wesell</strong> recovers 2 %CHARGE%. %LINEBREAK% At the start of the System Phase, remove this condition.'
+  },
+  'Merciless Pursuit': {
+    text: 'After you perform an attack, if the defender is equipped with <b>The Child</b>, you may acquire a lock on the defender.'
+  },
+  'Marked for Elimination': {
+    text: 'While you defend, if the attacker is equipped with <b>Tracking Fob</b> and has a lock on you, you cannot spend green tokens.'
+  },
+  'False Friend': {
+    text: 'During the System Phase, if an enemy ship with the <b>Tal Merrik</b> upgrade is at range 0-2 or an enemy remote is at range 0-2, flip your dial faceup. %LINEBREAK% <strong>Action:</strong> Gain 1 deplete token and stress token to discard this condition.'
+  },
+  'Trials of the Darksaber': {
+    text: 'While you perform an attack at attack range 0-2, you may spend 1 %CRIT% result. If you do, if the defending ship\'s player has scored more %POINT% than you, they lose 1 scored %POINT%. Place thatt %POINT% on this card. %LINEBREAK% After you defend, if you are destroyed by an enemy ship at attack range 0-2, assign the <b>Trials of the Darksaber</b> condition to the attacker (all %POINT% remain on this card). %LINEBREAK%. At the end of the game, this ship scores all %POINT% on this card.'
+  },
+  'Blaze Bomb': {
+    text: '<strong>Types:</strong> Device, Bomb %LINEBREAK% At the end of the Activation Phase, this device detonates. %LINEBREAK% When this device detonates, each ship and remote at range 0-1 rolls 1 attack die. Each ship or remote suffers 1 %HIT% damage for each %HIT%/%CRIT% result. %LINEBREAK% After this devices detonates, place a Blace by aligning the Blaze\'s guides to the device\'s tab. %LINEBREAK% A Blaze is an obstacle. After this obstacle is placed, place a fues marker on it. %LINEBREAK% During the End Phase, remove each Blaze with no fuse markers, then remove 1 fuse marker from each Blaze.'
+  },
+  'Clan Wren Commandos': {
+    text: 'INIT: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, RANGE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Types:</strong> Device, Remote %LINEBREAK% After an enemy ship overlaps you, it gains 1 strain token. %LINEBREAK% <strong>Activation Phase:</strong> At the start of this phase, you may relocate forward using a [1 %TURNLEFT%], [2 %STRAIGHT%], or [1 %TURNRIGHT%] template.%LINEBREAK% <strong>Engagement Phase:</strong> You cannot attack if there are enemy ships at range 0. To perform an attack, you must spend 1 %CHARGE%. While you perform an attack, you may change 1 %FOCUS% result to a %HIT% result.'
+  },
+  'Death Watch Commandos': {
+    text: 'INIT: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, RANGE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Types:</strong> Device, Remote %LINEBREAK% After an enemy ship overlaps you, it gains 1 strain token.%LINEBREAK% <strong>Activation Phase:</strong> At the start of this phase, you may relocate forward using a [1 %TURNLEFT%], [2 %STRAIGHT%], or [1 %TURNRIGHT%] template.%LINEBREAK% <strong>Engagement Phase:</strong> You cannot attack if there are enemy ships at range 0. To perform an attack, you must spend 1 %CHARGE%. While you perform an attack, you may change 1 %FOCUS% result to a %HIT% result.'
+  },
+  'Nite Owl Commandos': {
+    text: 'INIT: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, RANGE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Types:</strong> Device, Remote %LINEBREAK% After an enemy ship overlaps you, it gains 1 strain token.%LINEBREAK% <strong>Activation Phase:</strong> At the start of this phase, you may relocate forward using a [1 %TURNLEFT%], [2 %STRAIGHT%], or [1 %TURNRIGHT%] template.%LINEBREAK% <strong>Engagement Phase:</strong> You cannot attack if there are enemy ships at range 0. To perform an attack, you must spend 1 %CHARGE%. While you perform an attack, you may change 1 %FOCUS% result to a %HIT% result.'
+  },
+  'Imperial Super Commandos': {
+    text: 'INIT: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, RANGE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Types:</strong> Device, Remote %LINEBREAK% After an enemy ship overlaps you, it gains 1 strain token.%LINEBREAK% <strong>Activation Phase:</strong> At the start of this phase, you may relocate forward using a [1 %TURNLEFT%], [2 %STRAIGHT%], or [1 %TURNRIGHT%] template.%LINEBREAK% <strong>Engagement Phase:</strong> You cannot attack if there are enemy ships at range 0. To perform an attack, you must spend 1 %CHARGE%. While you perform an attack, you may change 1 %FOCUS% result to a %HIT% result.'
+  },
+  'Mandalorian Super Commandos': {
+    text: 'INIT: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, RANGE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Types:</strong> Device, Remote %LINEBREAK% After an enemy ship overlaps you, it gains 1 strain token.%LINEBREAK% <strong>Activation Phase:</strong> At the start of this phase, you may relocate forward using a [1 %TURNLEFT%], [2 %STRAIGHT%], or [1 %TURNRIGHT%] template.%LINEBREAK% <strong>Engagement Phase:</strong> You cannot attack if there are enemy ships at range 0. To perform an attack, you must spend 1 %CHARGE%. While you perform an attack, you may change 1 %FOCUS% result to a %HIT% result.'
+  }
+};
+
+({
+  'Defective Jawaballs': {
+    text: '<strong>Types:</strong>Marker %LINEBREAK% After a ship overlaps or moves through the Defective Jawaball marker, it gains 2 jam tokens. During the End Phase, remove all Defective Jawaballs.'
+  }
+});
+
+for (name in pilot_translations) {
+  data = pilot_translations[name];
+  if (data.display_name == null) {
+    data['display_name'] = name;
+  }
+}
+
+for (name in upgrade_translations) {
+  data = upgrade_translations[name];
+  if (data.display_name == null) {
+    data['display_name'] = name;
+  }
+}
+
+for (name in condition_translations) {
+  data = condition_translations[name];
+  if (data.display_name == null) {
+    data['display_name'] = name;
+  }
+}
+
+exportObj.setupTranslationCardData(pilot_translations, upgrade_translations, condition_translations);
 
 exportObj = typeof exports !== "undefined" && exports !== null ? exports : this;
 
@@ -28931,6 +29007,30 @@ exportObj.manifestByExpansion = {
       name: 'Guzzolene Injector',
       type: 'upgrade',
       count: 10
+    }, {
+      name: 'Supercharger',
+      type: 'upgrade',
+      count: 10
+    }, {
+      name: 'Suspicious-looking Droid',
+      type: 'upgrade',
+      count: 10
+    }, {
+      name: 'Scavenged Upgrade',
+      type: 'upgrade',
+      count: 10
+    }, {
+      name: 'Prototype G-Diffuser',
+      type: 'upgrade',
+      count: 10
+    }, {
+      name: 'Overclocked Hyperdrive',
+      type: 'upgrade',
+      count: 10
+    }, {
+      name: 'Defective Jawaballs',
+      type: 'upgrade',
+      count: 10
     }
   ],
   'Loose Ships': [
@@ -29060,7 +29160,7 @@ exportObj.Collection = (function() {
   }
 
   Collection.prototype.reset = function() {
-    var card, card_different_by_type, card_totals_by_type, component_content, contents, count, counts, expansion, expname, item, items, name, names, singletonsByType, sorted_names, summary, thing, things, type, ul, _, _base1, _base2, _base3, _base4, _base5, _base6, _base7, _base8, _i, _j, _k, _l, _len, _len1, _len2, _len3, _m, _n, _name, _name1, _name2, _o, _p, _ref, _ref1, _ref10, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9;
+    var card, card_different_by_type, card_totals_by_type, component_content, contents, count, counts, expansion, expname, item, items, names, singletonsByType, sorted_names, summary, thing, things, type, ul, _, _base1, _base2, _base3, _base4, _base5, _base6, _base7, _base8, _i, _j, _k, _l, _len, _len1, _len2, _len3, _m, _n, _name, _name1, _name2, _o, _p, _ref, _ref1, _ref10, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9;
     this.shelf = {};
     this.table = {};
     _ref = this.expansions;
@@ -29241,7 +29341,7 @@ exportObj.Collection = (function() {
   };
 
   Collection.prototype.setupUI = function() {
-    var collection_content, count, expansion, expname, input, item, items, name, names, pilot, pilotcollection_content, row, ship, shipcollection_content, singletonsByType, sorted_names, type, upgrade, upgradecollection_content, _i, _j, _k, _l, _len, _len1, _len2, _len3, _len4, _m, _name, _ref, _ref1, _ref10, _ref11, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9, _results;
+    var collection_content, count, expansion, expname, input, item, items, names, pilot, pilotcollection_content, row, ship, shipcollection_content, singletonsByType, sorted_names, type, upgrade, upgradecollection_content, _i, _j, _k, _l, _len, _len1, _len2, _len3, _len4, _m, _name, _ref, _ref1, _ref10, _ref11, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9, _results;
     singletonsByType = {};
     _ref = exportObj.manifestByExpansion;
     for (expname in _ref) {

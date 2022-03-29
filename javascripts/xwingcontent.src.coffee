@@ -16409,10 +16409,59 @@ exportObj.basicCardData = ->
         }
         {
             name: "Guzzolene Injector"
-            id: 470
+            id: 801
             points: 2
             charge: 2
             slot: "Illicit"
+        }
+        {
+            name: "Supercharger"
+            id: 802
+            points: 3
+            charge: 3
+            slot: "Illicit"
+        }
+        {
+            name: "Suspicious-looking Droid"
+            id: 803
+            points: 4
+            charge: 3
+            unique: true
+            slot: "Illicit"
+            restrictions: [
+                ["Action", "Focus"]
+            ]
+        }
+        {
+            name: "Scavenged Upgrade"
+            id: 804
+            points: 4
+            unique: true
+            slot: "Illicit"
+        }
+        {
+            name: "Prototype G-Diffuser"
+            id: 805
+            points: 4
+            charge: 1
+            unique: true
+            slot: "Illicit"
+        }
+        {
+            name: "Overclocked Hyperdrive"
+            id: 806
+            points: 5
+            unique: true
+            slot: "Illicit"
+        }
+        {
+            name: "Defective Jawaballs"
+            id: 807
+            points: 5
+            charge: 2
+            unique: true
+            slot: "Illicit"
+            applies_condition: 'Defective Jawaballs'.canonicalize()
         }
     ]
 
@@ -16587,6 +16636,10 @@ exportObj.basicCardData = ->
         {
             name: '''Mandalorian Super Commandos'''
             id: 39
+        }
+        {
+            name: 'Defective Jawaballs'
+            id: 100
         }
     ]
 
@@ -27247,6 +27300,18 @@ exportObj.cardLoaders.English = () ->
            text: """During the System Phase, if you would drop a %CREW% remote and there is an enemy medium, large, or huge ship at range 0-1 in your %REARARC%, you may place that device in the play area in your %REARARC% at range 0-1 so that it is at range 0 of that enemy ship instead. Then, that enemy ship gains 1 deplete, strain, or stress token of your choice."""
         "Guzzolene Injector":
            text: """Before you execute a maneuver, you may spend 1 %CHARGE%. If you do, increase that maneuver's speed by 1, if able, then roll 1 attack die. Suffer 1 %HIT% damage for each %HIT%/%CRIT% result."""
+        "Supercharger":
+           text: """<strong>Setup:</strong> Lose 3 %CHARGE%. %LINEBREAK% After you fully execute a speed 3-5 maneuver, recover 1 %CHARGE%. Then, you <strong>must</strong> spend 3 %CHARGE% if able to perform a %SLAM% action, even while stressed. While you perform a %SLAM% action this way, use a template of 1 speed higher if able, then gain 1 strain token and remove 1 disarm token. %LINEBREAK% Whenever you fail a SLAM action, suffer 1 %HIT% damage."""
+        "Suspicious-looking Droid":
+           text: """<strong>Suspicious-looking Droid:</strong> Stetup: Equip this side faceup. %LINEBREAK% During the System Phase, you <strong>must</strong> spend 1 %CHARGE% to gain 1 calculate token, if able. %LINEBREAK% During the End Phase, if you have 0 active %CHARGE%, flip this card. %LINEBREAK% <strong>Revolutionary Droid</strong> Whenever you would gain a focus token, gain 1 calculate token instead."""
+	"Scavenged Upgrade":
+           text: """<strong>Setup:</strong> Before you deploy, select one of the following upgrades at random and equip it (ignoring all requirements and without paying its upgrade cost): %LINEBREAK% Deadman's Switch, BT-1, Ion Limiter Override, Pattern Analyzer, Heavy Laser Cannon, Collision Detector, Hondo Ohnaka, GNK 'Gonk' Droid"""
+        "Prototype G-Diffuser":
+           text: """After you fully execute a sideslip, you may spend 1 %CHARGE%. If you do, remove all of your stress tokens, then gain strain tokens equal to twice the amount of stress tokens removed this way."""
+	"Overclocked Hyperdrive":
+           text: """<strong>Setup:</strong> Start in reserve. %LINEBREAK% At the end of Setup, randomly select an objective token. Deploy from that objective token instead, inserting the [1 %STRAIGHT%] template into either set of guides and aligning it with your rear guides."""
+	"Defective Jawaball":
+           text: """During the System Phase, you may spend 1 %CHARGE% to launch a Defective Jawaball using the [1 %STRAIGHT%] template. %LINEBREAK% <i>The Defective Jawaball is a marker, not a device, so it cannot be fused and it does not interact with effects such as Feedback Ping.</i>"""
 
 
         # Epic upgrades
@@ -27543,6 +27608,8 @@ exportObj.cardLoaders.English = () ->
            text: '''INIT: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, RANGE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Types:</strong> Device, Remote %LINEBREAK% After an enemy ship overlaps you, it gains 1 strain token.%LINEBREAK% <strong>Activation Phase:</strong> At the start of this phase, you may relocate forward using a [1 %TURNLEFT%], [2 %STRAIGHT%], or [1 %TURNRIGHT%] template.%LINEBREAK% <strong>Engagement Phase:</strong> You cannot attack if there are enemy ships at range 0. To perform an attack, you must spend 1 %CHARGE%. While you perform an attack, you may change 1 %FOCUS% result to a %HIT% result.'''
         '''Mandalorian Super Commandos''':
            text: '''INIT: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, RANGE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Types:</strong> Device, Remote %LINEBREAK% After an enemy ship overlaps you, it gains 1 strain token.%LINEBREAK% <strong>Activation Phase:</strong> At the start of this phase, you may relocate forward using a [1 %TURNLEFT%], [2 %STRAIGHT%], or [1 %TURNRIGHT%] template.%LINEBREAK% <strong>Engagement Phase:</strong> You cannot attack if there are enemy ships at range 0. To perform an attack, you must spend 1 %CHARGE%. While you perform an attack, you may change 1 %FOCUS% result to a %HIT% result.'''
+       'Defective Jawaballs':
+           text: '''<strong>Types:</strong>Marker %LINEBREAK% After a ship overlaps or moves through the Defective Jawaball marker, it gains 2 jam tokens. During the End Phase, remove all Defective Jawaballs.'''
 
     # in this file the display_name is often omitted, if it is identical to the name. I am too lazy to add those manually (though running the translation script would automatically do so). As this will pop up with every new card, I add those tags here
     for name, data of pilot_translations
@@ -38152,6 +38219,36 @@ exportObj.manifestByExpansion =
     "Purchased from a very legitimate Jawa": [
         {
             name: 'Guzzolene Injector'
+            type: 'upgrade'
+            count: 10
+        }
+        {
+            name: 'Supercharger'
+            type: 'upgrade'
+            count: 10
+        }
+        {
+            name: 'Suspicious-looking Droid'
+            type: 'upgrade'
+            count: 10
+        }
+        {
+            name: 'Scavenged Upgrade'
+            type: 'upgrade'
+            count: 10
+        }
+        {
+            name: 'Prototype G-Diffuser'
+            type: 'upgrade'
+            count: 10
+        }
+        {
+            name: 'Overclocked Hyperdrive'
+            type: 'upgrade'
+            count: 10
+        }
+        {
+            name: 'Defective Jawaballs'
             type: 'upgrade'
             count: 10
         }
