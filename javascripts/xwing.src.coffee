@@ -970,7 +970,7 @@ class exportObj.SquadBuilderBackend
                     else
                         language_code = language_tag.split('-')[0]
                         # check if the language code is available
-                        if langc of exportObj.codeToLanguage
+                        if language_code of exportObj.codeToLanguage
                             # yep - use as language with reasonable priority
                             cb(exportObj.codeToLanguage[language_code], 8)
                         else
@@ -1084,12 +1084,21 @@ class exportObj.CardBrowser
                                         </label>
                                     </div>
                                     <div class = "advanced-search-point-selection-container">
-                                        <strong class="translated" defaultText="Point costs:"></strong>
+                                        <strong class="translated" defaultText="Point cost:"></strong>
                                         <label class = "advanced-search-label set-minimum-points">
                                             <span class="translated" defaultText="from"></span> <input type="number" class="minimum-point-cost advanced-search-number-input" value="0" /> 
                                         </label>
                                         <label class = "advanced-search-label set-maximum-points">
-                                            <span class="translated" defaultText="to"></span> <input type="number" class="maximum-point-cost advanced-search-number-input" value="200" /> 
+                                            <span class="translated" defaultText="to"></span> <input type="number" class="maximum-point-cost advanced-search-number-input" value="20" /> 
+                                        </label>
+                                    </div>
+                                    <div class = "advanced-search-loadout-selection-container">
+                                        <strong class="translated" defaultText="Loadout cost:"></strong>
+                                        <label class = "advanced-search-label set-minimum-loadout">
+                                            <span class="translated" defaultText="from"></span> <input type="number" class="minimum-loadout-cost advanced-search-number-input" value="0" /> 
+                                        </label>
+                                        <label class = "advanced-search-label set-maximum-loadout">
+                                            <span class="translated" defaultText="to"></span> <input type="number" class="maximum-loadout-cost advanced-search-number-input" value="99" /> 
                                         </label>
                                     </div>
                                     <div class = "advanced-search-collection-container">
@@ -1098,7 +1107,7 @@ class exportObj.CardBrowser
                                             <span class="translated" defaultText="from"></span> <input type="number" class="minimum-owned-copies advanced-search-number-input" value="0" /> 
                                         </label>
                                         <label class = "advanced-search-label set-maximum-owened-copies">
-                                            <span class="translated" defaultText="to"></span> <input type="number" class="maximum-owned-copies advanced-search-number-input" value="100" /> 
+                                            <span class="translated" defaultText="to"></span> <input type="number" class="maximum-owned-copies advanced-search-number-input" value="99" /> 
                                         </label>
                                     </div>
                                     <div class = "advanced-search-misc-container">
@@ -1349,6 +1358,8 @@ class exportObj.CardBrowser
         
         @minimum_point_costs = ($ @container.find('.xwing-card-browser .minimum-point-cost'))[0]
         @maximum_point_costs = ($ @container.find('.xwing-card-browser .maximum-point-cost'))[0]
+        @minimum_loadout_costs = ($ @container.find('.xwing-card-browser .minimum-loadout-cost'))[0]
+        @maximum_loadout_costs = ($ @container.find('.xwing-card-browser .maximum-loadout-cost'))[0]
         @standard_checkbox = ($ @container.find('.xwing-card-browser .standard-checkbox'))[0]
         @unique_checkbox = ($ @container.find('.xwing-card-browser .unique-checkbox'))[0]
         @non_unique_checkbox = ($ @container.find('.xwing-card-browser .non-unique-checkbox'))[0]
@@ -1383,7 +1394,7 @@ class exportObj.CardBrowser
         @duplicateslots = ($ @container.find('.xwing-card-browser .duplicate-slots-checkbox'))[0]
         @action_available_selection = ($ @container.find('.xwing-card-browser select.action-available-selection'))
         # ToDo: This does not seem like the correct place to have a list of all actions. Don't we have that elsewhere?!
-        for action in ["Evade","Focus","Lock","Boost","Barrel Roll","Calculate","Reinforce","Rotate Arc","Coordinate","Slam","Reload","Jam"].sort()
+        for action in ["Evade","Focus","Lock","Boost","Barrel Roll","Calculate","Reinforce","Rotate Arc","Coordinate","Slam","Reload","Jam","Cloak"].sort()
             opt = $ document.createElement('OPTION')
             opt.text exportObj.translate('action', action)
             opt.val action
@@ -1391,7 +1402,7 @@ class exportObj.CardBrowser
         @action_available_selection.select2
             minimumResultsForSearch: if $.isMobile() then -1 else 0
         @linkedaction_available_selection = ($ @container.find('.xwing-card-browser select.linkedaction-available-selection'))
-        for linkedaction in ["Evade","Focus","Lock","Boost","Barrel Roll","Calculate","Reinforce","Rotate Arc","Coordinate","Slam","Reload","Jam"].sort()
+        for linkedaction in ["Evade","Focus","Lock","Boost","Barrel Roll","Calculate","Reinforce","Rotate Arc","Coordinate","Slam","Reload","Jam","Cloak"].sort()
             opt = $ document.createElement('OPTION')
             opt.text exportObj.translate('action', linkedaction)
             opt.val linkedaction
@@ -1471,9 +1482,11 @@ class exportObj.CardBrowser
         
         @faction_selection[0].onchange = => @renderList @sort_selector.val()
         for basesize, checkbox of @base_size_checkboxes
-            checkbox.onclick = => @renderList @sort_selector.val()            
+            checkbox.onclick = => @renderList @sort_selector.val()
         @minimum_point_costs.oninput = => @renderList @sort_selector.val()
         @maximum_point_costs.oninput = => @renderList @sort_selector.val()
+        @minimum_loadout_costs.oninput = => @renderList @sort_selector.val()
+        @maximum_loadout_costs.oninput = => @renderList @sort_selector.val()
         @standard_checkbox.onclick = => @renderList @sort_selector.val()
         @unique_checkbox.onclick = => @renderList @sort_selector.val()
         @non_unique_checkbox.onclick = => @renderList @sort_selector.val()
@@ -1652,7 +1665,7 @@ class exportObj.CardBrowser
 
     addCardTo: (container, card) ->
         option = $ document.createElement('OPTION')
-        option.text "#{if card.display_name then card.display_name else card.name} (#{if card.data.points? then card.data.points else '*'}#{if card.data.pointsupg? then "/#{card.data.pointsupg}" else ''})"
+        option.text "#{if card.display_name then card.display_name else card.name} (#{if card.data.points? then card.data.points else '*'}#{if card.data.loadout? then "/#{card.data.loadout}" else ''})"
         option.data 'name', card.name
         option.data 'display_name', card.display_name
         option.data 'type', card.type
@@ -1771,7 +1784,7 @@ class exportObj.CardBrowser
             return false unless actions? and ((("R> " + action) in actions) or (("> " + action) in actions))
 
         # check if point costs matches
-        if @minimum_point_costs.value > 0 or @maximum_point_costs.value < 200
+        if @minimum_point_costs.value > 0 or @maximum_point_costs.value < 20
             return false unless (card.data.points >= @minimum_point_costs.value and card.data.points <= @maximum_point_costs.value) or (card.data.variablepoints?)
             if card.data.variablepoints?
                 matching_points = false
@@ -1792,6 +1805,22 @@ class exportObj.CardBrowser
                         break if matching_points
                     break if matching_points            
                 return false unless matching_points
+
+        # check if loadout costs matches
+        if @minimum_loadout_costs.value > 0 or @maximum_loadout_costs.value < 99
+            return false unless (card.data.loadout >= @minimum_loadout_costs.value and card.data.loadout <= @maximum_loadout_costs.value)
+            if card.orig_type == 'Ship' # check if pilot matching points exist
+                matching_loadout = false
+                for faction in selected_factions
+                    for name, pilots of exportObj.pilotsByFactionCanonicalName[faction]
+                        for pilot in pilots
+                            if pilot.ship == card.data.name
+                                if pilot.loadout >= @minimum_point_costs.value and pilot.loadout <= @maximum_loadout_costs.value
+                                    matching_loadout = true
+                                    break
+                        break if matching_loadout
+                    break if matching_loadout
+                return false unless matching_loadout
 
         # check if used slot matches
         used_slots = @slot_used_selection.val()
@@ -2073,6 +2102,8 @@ try
     if exportObj.languagePriority > 3
         return
     exportObj.currentLanguage = DFL_LANGUAGE
+    if exportObj.languagePriority == -1
+        return
     # some browses just provide a single navigator.language, some provide an array navigator.languages 
     languageCodes = [navigator.language].concat(navigator.languages)
     for langc in languageCodes
@@ -2154,7 +2185,8 @@ exportObj.setupTranslationSupport = ->
 
     # do we need to load dfl as well? Not sure...
     exportObj.loadCards DFL_LANGUAGE
-    exportObj.loadCards exportObj.currentLanguage 
+    if DFL_LANGUAGE != exportObj.currentLanguage
+        exportObj.loadCards exportObj.currentLanguage 
     $(exportObj).trigger 'xwing:languageChanged', [exportObj.currentLanguage, 'reload']
 
 exportObj.translateUIElements = (context=undefined) ->
@@ -2204,9 +2236,16 @@ exportObj.toTTS = (txt) ->
 
 exportObj.slotsMatching = (slota, slotb) ->
     return true if slota == slotb
-    return false if slota != 'HardpointShip' and slotb != 'HardpointShip'
-    return true if slota == 'Torpedo' or slota == 'Cannon' or slota == 'Missile'
-    return true if slotb == 'Torpedo' or slotb == 'Cannon' or slotb == 'Missile'
+    switch slota
+        when 'HardpointShip'
+            return true if slotb == 'Torpedo' or slotb == 'Cannon' or slotb == 'Missile'
+        when 'VersatileShip'
+            return true if slotb == 'Torpedo' or slotb == 'Missile'
+    switch slotb
+        when 'HardpointShip'
+            return true if slota == 'Torpedo' or slota == 'Cannon' or slota == 'Missile'
+        when 'VersatileShip'
+            return true if slota == 'Torpedo' or slota == 'Missile'
     return false
 
 $.isMobile = ->
@@ -3201,23 +3240,7 @@ class exportObj.SquadBuilder
     createInfoContainerUI: (include_intro = true) ->
         if include_intro == true
             intro = """
-                <div class="card intro">
-                    <h2>YASB 2 for X-Wing (Version 2.5) </h2>
-                    <p>YASB (Yet Another Squad Builder) is a simple, fast, squad builder for X-Wing Miniatures by <a href="https://www.atomicmassgames.com/">Atomic Mass Games</a>.</p>
-                    <h5>Credits</h5>
-                    <p>Built upon the amazing original <a href="https://geordanr.github.io/xwing/">Yet Another Squad Builder</a>.</p>
-                    <p>YASB is updated and maintained by Stephen Kim.</p>
-                    <p>Additional credits to:<br>
-                    2.5 Update Data: Devon Monkhouse, Perry Low, Andrew Oehler.<br>
-                    2.0 launch data: Evan Cameron, Jonathan Hon, Devon Monkhouse, and Mark Stewart.<br>
-                    Translation Team: Patrick Mischke, godgremos, Clément Bourgoin, ManuelWittke<br>
-                    Site logo: Thomas Kohler<br>
-                    Quick Build Support: Patrick Mischke</p>
-
-                    <p>This builder is unofficial and is not affiliated with Atomic Mass Games, Lucasfilm Ltd., or Disney.</p>
-
-                    <p>This site will always be free, and always 100% available for all people to use. However, if you want to donate, a button is prepared for you.</p>
-                    <p><button class="btn btn-primary paypal" onclick="window.open('https://paypal.me/raithos');">Donate</button></p>
+                <div class="card intro translated" defaultText="Intro Card YASB">
                 </div>
             """
         else
@@ -3486,7 +3509,7 @@ class exportObj.SquadBuilder
                     
             # Notes, if present
             @printable_container.find('.printable-body').append $.trim """
-                <div class="version">Points Version: 2.5.0 03/01/2022</div>
+                <div class="version">Points Version: 06/15/2022</div>
             """
             if $.trim(@notes.val()) != ''
                 @printable_container.find('.printable-body').append $.trim """
@@ -3712,7 +3735,7 @@ class exportObj.SquadBuilder
         @backend_save_list_as_button.toggleClass 'disabled', @total_points == 0
         @backend_delete_list_button.toggleClass 'disabled', not @current_squad.id?
         if @ships.length > 1
-            $('meta[property="og:description"]').attr("content", @uitranslation("X-Wing Squadron by YASB 2: ") + @current_squad.name + ": " + @describeSquad())
+            $('meta[property="og:description"]').attr("content", @uitranslation("X-Wing Squadron by YASB: ") + @current_squad.name + ": " + @describeSquad())
         else
             $('meta[property="og:description"]').attr("content", @uitranslation("YASB advertisment"))
         
@@ -3728,10 +3751,10 @@ class exportObj.SquadBuilder
         @squad_name_input.val @current_squad.name
         return unless $.getParameterByName('f') == @faction
         if @current_squad.name != @uitranslation("Unnamed Squadron") and @current_squad.name != @uitranslation("Unsaved Squadron")
-            if (document.title != "YASB 2 - " + @current_squad.name) 
-                document.title = "YASB 2 - " + @current_squad.name
+            if (document.title != "YASB - " + @current_squad.name) 
+                document.title = "YASB - " + @current_squad.name
         else
-            document.title = "YASB 2"
+            document.title = "YASB"
         @updatePrintAndExportTexts()
 
 
@@ -3944,15 +3967,12 @@ class exportObj.SquadBuilder
                     else
                         throw new Error("Unique #{type} '#{unique.name}' already claimed as pilot")
 
-            # Claim other upgrades with the same canonical name
-            for otherslot, bycanonical of exportObj.upgradesBySlotUniqueName
-                for canonical, other of bycanonical
-                    if canonical.getXWSBaseName() == unique.canonical_name.getXWSBaseName() and unique != other
-                        if @uniqueIndex(other, 'Upgrade') < 0
-                            # console.log "Also claiming unique #{other.canonical_name} (#{otherslot}) in use"
-                            @uniques_in_use['Upgrade'].push other
-                        # else
-                        #     throw new Error("Unique #{type} '#{unique.name}' already claimed as #{otherslot}")
+            for other in (exportObj.upgradesByUniqueName[unique.canonical_name.getXWSBaseName()] or [])
+                if @uniqueIndex(other, 'Upgrade') < 0
+                    # console.log "Also claiming unique pilot #{other.canonical_name} in use"
+                    @uniques_in_use['Upgrade'].push other
+                else
+                    throw new Error("Unique #{type} '#{other.name}' already claimed as pilot")
 
             # Solitary Check
             if unique.solitary?
@@ -4078,7 +4098,7 @@ class exportObj.SquadBuilder
             if include_pilot? and include_pilot.unique? and (@matcher(include_pilot.name, term) or (include_pilot.display_name and @matcher(include_pilot.display_name, term)) )
                 eligible_faction_pilots.push include_pilot
 
-            retval = ({ id: pilot.id, text: "#{if exportObj.settings?.initiative_prefix? and exportObj.settings.initiative_prefix then pilot.skill + ' - ' else ''}#{if pilot.display_name then pilot.display_name else pilot.name} (#{pilot.points}/#{pilot.pointsupg})", points: pilot.points, ship: pilot.ship, name: pilot.name, display_name: pilot.display_name, disabled: pilot not in eligible_faction_pilots } for pilot in available_faction_pilots)
+            retval = ({ id: pilot.id, text: "#{if exportObj.settings?.initiative_prefix? and exportObj.settings.initiative_prefix then pilot.skill + ' - ' else ''}#{if pilot.display_name then pilot.display_name else pilot.name} (#{pilot.points}/#{pilot.loadout})", points: pilot.points, ship: pilot.ship, name: pilot.name, display_name: pilot.display_name, disabled: pilot not in eligible_faction_pilots } for pilot in available_faction_pilots)
         else
             # select according to quickbuild cards
             # filter for faction and ship
@@ -4181,16 +4201,13 @@ class exportObj.SquadBuilder
 
         points_without_include_upgrade = ship.upgrade_points_total - this_upgrade_obj.getPoints(include_upgrade)
 
-        eligible_upgrades = (upgrade for upgrade_name, upgrade of available_upgrades when (not upgrade.unique? or upgrade not in @uniques_in_use['Upgrade']) and (ship.restriction_check((if upgrade.restrictions then upgrade.restrictions else undefined),this_upgrade_obj, this_upgrade_obj.getPoints(upgrade), points_without_include_upgrade)) and upgrade not in upgrades_in_use and ((not upgrade.max_per_squad?) or ship.builder.countUpgrades(upgrade.canonical_name) < upgrade.max_per_squad) and (not upgrade.solitary? or (upgrade.slot not in @uniques_in_use['Slot'] or include_upgrade?.solitary?)))
-        
-        
+        eligible_upgrades = (upgrade for upgrade_name, upgrade of available_upgrades when (not upgrade.unique? or upgrade not in @uniques_in_use['Upgrade']) and ship.restriction_check((if upgrade.restrictions then upgrade.restrictions else undefined),this_upgrade_obj, this_upgrade_obj.getPoints(upgrade), points_without_include_upgrade) and upgrade not in upgrades_in_use and ((not upgrade.max_per_squad?) or ship.builder.countUpgrades(upgrade.canonical_name) < upgrade.max_per_squad) and (not upgrade.solitary? or (upgrade.slot not in @uniques_in_use['Slot'] or include_upgrade?.solitary?)))
 
         for equipped_upgrade in (upgrade.data for upgrade in ship.upgrades when upgrade?.data?)
             eligible_upgrades.removeItem equipped_upgrade
 
         # Re-enable selected upgrade
-        if include_upgrade? and ((( @matcher(include_upgrade.name, term) or (include_upgrade.display_name and @matcher(include_upgrade.display_name, term))) ))# or current_upgrade_forcibly_removed)
-            # available_upgrades.push include_upgrade
+        if include_upgrade? and ((( @matcher(include_upgrade.name, term) or (include_upgrade.display_name and @matcher(include_upgrade.display_name, term)))))
             eligible_upgrades.push include_upgrade
 
         retval = ({ id: upgrade.id, text: "#{if upgrade.display_name then upgrade.display_name else upgrade.name} (#{this_upgrade_obj.getPoints(upgrade)}#{if upgrade.variablepoints then '*' else ''})", points: this_upgrade_obj.getPoints(upgrade), name: upgrade.name, display_name: upgrade.display_name, disabled: upgrade not in eligible_upgrades } for upgrade in available_upgrades)
@@ -4214,7 +4231,7 @@ class exportObj.SquadBuilder
                     added_dials[ship.data.name] = (added_dials[ship.data.name] ? []).concat [maneuvers_modified.toString()] # save maneuver as string, as that is easier to compare than arrays (if e.g. two ships of same type, one with and one without R4 are in a squad, we add 2 dials)
                     dialHTML += '<div class="fancy-dial">' + 
                                 """<h4 class="ship-name-dial">#{if ship.data.display_name? then ship.data.display_name else ship.data.name}""" +
-                                """#{if maneuvers_modified.toString() != maneuvers_unmodified.toString() then " (" + @uitranslation(modified) + ")" else ""}</h4>""" +
+                                """#{if maneuvers_modified.toString() != maneuvers_unmodified.toString() then " (" + @uitranslation("modified") + ")" else ""}</h4>""" +
                                 @getManeuverTableHTML(maneuvers_modified, maneuvers_unmodified) + '</div>'
 
         return """
@@ -4419,7 +4436,7 @@ class exportObj.SquadBuilder
                         if not (pilot.skill in possible_inis)
                             possible_inis.push(pilot.skill)
                         possible_costs.push(pilot.points)
-                        possible_loadout.push(pilot.pointsupg)
+                        possible_loadout.push(pilot.loadout)
                         for slot, state of slot_types
                             switch pilot.slots.filter((item) => item == slot).length
                                 when 1
@@ -4613,7 +4630,7 @@ class exportObj.SquadBuilder
                     
                     container.find('tr.info-skill td.info-data').text data.skill
                     container.find('tr.info-skill').show()
-                    container.find('tr.info-loadout td.info-data').text data.pointsupg
+                    container.find('tr.info-loadout td.info-data').text data.loadout
                     container.find('tr.info-loadout').show()
                     if data.engagement?
                         container.find('tr.info-engagement td.info-data').text data.engagement
@@ -5104,7 +5121,7 @@ class exportObj.SquadBuilder
                     
                 for ship in @ships
                     expensive_slots = []
-                    while ship.upgrade_points_total < ship.pilot.pointsupg
+                    while ship.upgrade_points_total < ship.pilot.loadout
                         # we wan't to utilize newly added upgrade slots, so we will check for slots iteratively
                         unused_addons = []
                         for upgrade in ship.upgrades
@@ -5286,12 +5303,17 @@ class exportObj.SquadBuilder
         uniquetext = comma = othertext = text = ''
         if card.restrictions
             for r in card.restrictions
-                if r[0] == "orUnique"
-                    uniquetext = exportObj.translate('restrictions', " or Squad Including") + " #{r[1]}"
-                    continue
                 switch r[0]
+                    when "FactionOrUnique"
+                        othertext += comma + exportObj.translate('faction', "#{r[2]}")                
+                        uniquetext = exportObj.translate('restrictions', " or Squad Including") + " #{r[1]}"
                     when "Base"
-                        text += comma + "#{r[1]} " + exportObj.translate('restrictions', "Ship")
+                        for b, index in r
+                            if b == "Base" 
+                                text += comma
+                                continue
+                            text += "#{b} "
+                            if index < r.length - 1 then text += "or " else text += exportObj.translate('restrictions', "Ship")
                     when "Action"
                         array = [r[1]]
                         text += comma + @formatActions(array,"", [])
@@ -5424,10 +5446,10 @@ class exportObj.SquadBuilder
             points: @total_points
             vendor:
                 yasb:
-                    builder: 'YASB 2.5'
+                    builder: 'YASB - X-Wing 2.5'
                     builder_url: window.location.href.split('?')[0]
                     link: @getPermaLink()
-            version: '2.5.0'
+            version: '06/15/2022'
             # there is no point to have this version identifier, if we never actually increase it, right?
 
         for ship in @ships
@@ -5518,8 +5540,8 @@ class exportObj.SquadBuilder
                 success = true
                 error = ""
 
-                serialized_squad = "v9ZhZ20Z" # serialization v9, extended squad, 20 points
-                # serialization schema SHIPID:UPGRADEID,UPGRADEID,...,UPGRADEID:;SHIPID:UPGRADEID,...
+                if @isStandard then gamemode = 'h' else gamemode = 's'
+                serialized_squad = ""
 
                 for pilot in xws.pilots
                     new_ship = @addShip()
@@ -5530,7 +5552,7 @@ class exportObj.SquadBuilder
                     if pilot.id
                         pilotxws = pilot.id
                     else if pilot.name
-                       pilotxws = pilot.name
+                        pilotxws = pilot.name
                     else
                         success = false
                         error = "Pilot without identifier"
@@ -5548,6 +5570,10 @@ class exportObj.SquadBuilder
                                 if (possible_pilot.xws and possible_pilot.xws == pilotxws) or (not possible_pilot.xws and key == pilotxws)
                                     serialized_squad += possible_pilot.id
                                     break
+
+                    # game mode version check: pilot and ship
+                    if not exportObj.standardCheck(pilot, true) and gamemode == 'h'
+                        gamemode = 's'
 
                     serialized_squad += "X"
 
@@ -5568,7 +5594,14 @@ class exportObj.SquadBuilder
                                     continue
                                 serialized_squad += upgrade.id
                                 serialized_squad += "W"
+                                if not exportObj.standardCheck(upgrade, true) and gamemode == 'h'
+                                    gamemode = 's'
                     serialized_squad += "XY"
+
+                serialized_squad_intro = "v9Z" + gamemode + "Z20Z" # serialization v9, extended squad, 20 points
+                # serialization schema SHIPID:UPGRADEID,UPGRADEID,...,UPGRADEID:;SHIPID:UPGRADEID,...
+
+                serialized_squad = serialized_squad_intro + serialized_squad
 
                 @loadFromSerialized(serialized_squad)
 
@@ -5629,22 +5662,24 @@ class Ship
         #console.log "Attempt to copy #{other?.pilot?.name}"
         return unless other.pilot? and other.data?
         #console.log "Setting pilot to ID=#{other.pilot.id}"
-        if @builder.isQuickbuild        
-            if not (other.pilot.unique or (other.pilot.max_per_squad? and @builder.countPilots(other.pilot.canonical_name) >= other.pilot.max_per_squad))
-                # check if any upgrades are unique. In that case the whole ship may not be copied
-                no_uniques_involved = true
+        if @builder.isQuickbuild
+            # check if pilot is unique. In that case the whole ship may not be copied, but the cheapest alternative will be selected
+            no_uniques_involved = not (other.pilot.unique or (other.pilot.max_per_squad? and @builder.countPilots(other.pilot.canonical_name) >= other.pilot.max_per_squad))
+            if no_uniques_involved
+                # also check all upgrades
                 for upgrade in other.upgrades
                     if (upgrade.data?.unique? and upgrade.data.unique) or (upgrade.data?.max_per_squad? and @builder.countUpgrades(upgrade.data.canonical_name) >= upgrade.data.max_per_squad) or upgrade.data?.solitary?
-                        no_uniques_involved = false
-                        # select cheapest generic like above
-                        available_pilots = (pilot_data for pilot_data in @builder.getAvailablePilotsForShipIncluding(other.data.name) when not pilot_data.disabled)
-                        if available_pilots.length > 0
-                            @setPilotById available_pilots[0].id, true
-                            break
-                        else
-                            return
-                if no_uniques_involved
-                    @setPilotById other.quickbuildId
+                        no_uniques_involved = false                
+            if no_uniques_involved
+                # still no uniques, so we can copy that ship as is
+                @setPilotById other.quickbuildId
+            else
+                # try to select another pilot for the same ship instead
+                available_pilots = (pilot_data for pilot_data in @builder.getAvailablePilotsForShipIncluding(other.data.name) when not pilot_data.disabled)
+                if available_pilots.length > 0
+                    @setPilotById available_pilots[0].id, true
+                else
+                    return
         else 
             if other.pilot.unique or (other.pilot.max_per_squad? and @builder.countPilots(other.pilot.canonical_name) >= other.pilot.max_per_squad)
                 # Look for cheapest generic or available unique, otherwise do nothing
@@ -5803,6 +5838,7 @@ class Ship
 
                 else
                     @copy_button.hide()
+                @row.removeClass('unsortable')
                 @builder.container.trigger 'xwing:pointsUpdated'
                 @builder.container.trigger 'xwing-backend:squadDirtinessChanged'
 
@@ -5903,7 +5939,7 @@ class Ship
     getPoints: ->
         if not @builder.isQuickbuild
             points = @pilot?.points ? 0
-            total_upgrades = @pilot?.pointsupg ? "N/A"
+            total_upgrades = @pilot?.loadout ? "N/A"
             @points_container.find('div').text "#{points}"
             @points_container.find('.upgrade-points').text "(#{@upgrade_points_total}/#{total_upgrades})"
             if points > 0
@@ -5986,7 +6022,7 @@ class Ship
 
             @pilot_selector.select2 'data',
                 id: @pilot.id
-                text: "#{if exportObj.settings?.initiative_prefix? and exportObj.settings.initiative_prefix then @pilot.skill + ' - ' else ''}#{if @pilot.display_name then @pilot.display_name else @pilot.name}#{if @quickbuildId != -1 then exportObj.quickbuildsById[@quickbuildId].suffix else ""} (#{if @quickbuildId != -1 then (if @primary then exportObj.quickbuildsById[@quickbuildId].threat else 0) else @pilot.points}/#{if @quickbuildId != -1 then "" else @pilot.pointsupg})"
+                text: "#{if exportObj.settings?.initiative_prefix? and exportObj.settings.initiative_prefix then @pilot.skill + ' - ' else ''}#{if @pilot.display_name then @pilot.display_name else @pilot.name}#{if @quickbuildId != -1 then exportObj.quickbuildsById[@quickbuildId].suffix else ""} (#{if @quickbuildId != -1 then (if @primary then exportObj.quickbuildsById[@quickbuildId].threat else 0) else @pilot.points}/#{if @quickbuildId != -1 then "" else @pilot.loadout})"
             @pilot_selector.data('select2').container.show()
             for upgrade in @upgrades
                 points = upgrade.getPoints()
@@ -6006,8 +6042,8 @@ class Ship
         @row.addClass 'row ship mb-5 mb-sm-0 unsortable'
         @row.insertBefore @builder.notes_container
 
-        if @pilot?
-            shipicon = if exportObj.ships[@pilot.ship].icon then exportObj.ships[@pilot.ship].icon else exportObj.ships[@pilot.ship].xws
+        #if @pilot?
+        #    shipicon = if exportObj.ships[@pilot.ship].icon then exportObj.ships[@pilot.ship].icon else exportObj.ships[@pilot.ship].xws
         
         @row.append $.trim """
             <div class="col-md-3">
@@ -6313,9 +6349,9 @@ class Ship
                     ++count
             else
                 recurringicon += '<sup><i class="fas fa-caret-up"></i></sup>'
-        forceHTML = if (@pilot.force?) then $.trim """
+        forceHTML = if (effective_stats.force? and effective_stats.force > 0) then $.trim """
             <i class="xwing-miniatures-font header-force xwing-miniatures-font-forcecharge"></i>
-            <span class="info-data info-force">#{statAndEffectiveStat((@pilot.ship_override?.force ? @pilot.force), effective_stats, 'force')}#{recurringicon}</span>
+            <span class="info-data info-force">#{statAndEffectiveStat((@pilot.ship_override?.force ? @pilot.force ? 0), effective_stats, 'force')}#{recurringicon}</span>
         """ else ''
 
         if @pilot.charge?
@@ -6418,7 +6454,7 @@ class Ship
         
         html += $.trim """
             <div class="ship-points-total">
-                <strong>#{@uitranslation("Ship Cost")}: #{@getPoints()}, #{@uitranslation("Loadout")}: (#{@upgrade_points_total}/#{@pilot.pointsupg}), #{@uitranslation("Half Points")}: #{HalfPoints}, #{@uitranslation("Damage Threshold")}: #{Threshold}</strong> 
+                <strong>#{@uitranslation("Ship Cost")}: #{@getPoints()}, #{@uitranslation("Loadout")}: (#{@upgrade_points_total}/#{@pilot.loadout}), #{@uitranslation("Half Points")}: #{HalfPoints}, #{@uitranslation("Damage Threshold")}: #{Threshold}</strong> 
             </div>
         """
 
@@ -6444,7 +6480,7 @@ class Ship
         halfPoints = Math.floor @getPoints() / 2        
         threshold = Math.floor (@effectiveStats()['hull'] + @effectiveStats()['shields']) / 2
 
-        table_html += """<tr class="simple-ship-half-points"><td colspan="2">#{@uitranslation("Loadout")}: (#{@upgrade_points_total}/#{@pilot.pointsupg}) #{@uitranslation("Half Points")}: #{halfPoints} #{@uitranslation("Damage Threshold")}: #{threshold}</td></tr>"""
+        table_html += """<tr class="simple-ship-half-points"><td colspan="2">#{@uitranslation("Loadout")}: (#{@upgrade_points_total}/#{@pilot.loadout}) #{@uitranslation("Half Points")}: #{halfPoints} #{@uitranslation("Damage Threshold")}: #{threshold}</td></tr>"""
 
         table_html += '<tr><td>&nbsp;</td><td></td></tr>'
         table_html
@@ -6465,7 +6501,7 @@ class Ship
         halfPoints = Math.floor @getPoints() / 2        
         threshold = Math.floor (@effectiveStats()['hull'] + @effectiveStats()['shields']) / 2
 
-        simplecopy += """#{@uitranslation("Ship Cost")}: #{@getPoints()}  #{@uitranslation("Loadout")}: (#{@upgrade_points_total}/#{@pilot.pointsupg})  #{@uitranslation("Half Points")}: #{halfPoints}  #{@uitranslation("Damage Threshold")}: #{threshold}    \n    \n"""
+        simplecopy += """#{@uitranslation("Ship Cost")}: #{@getPoints()}  #{@uitranslation("Loadout")}: (#{@upgrade_points_total}/#{@pilot.loadout})  #{@uitranslation("Half Points")}: #{halfPoints}  #{@uitranslation("Damage Threshold")}: #{threshold}    \n    \n"""
 
         simplecopy
         
@@ -6483,7 +6519,7 @@ class Ship
                 upgrade_reddit = upgrade.toRedditText points
                 reddit_upgrades.push upgrade_reddit if upgrade_reddit?
             reddit += reddit_upgrades.join "    "
-            reddit += """&nbsp;*#{@uitranslation("Ship Cost")}: #{@getPoints()}  #{@uitranslation("Loadout")}: (#{@upgrade_points_total}/#{@pilot.pointsupg})  #{@uitranslation("Half Points")}: #{halfPoints}  #{@uitranslation("Damage Threshold")}: #{threshold}*    \n"""
+            reddit += """&nbsp;*#{@uitranslation("Ship Cost")}: #{@getPoints()}  #{@uitranslation("Loadout")}: (#{@upgrade_points_total}/#{@pilot.loadout})  #{@uitranslation("Half Points")}: #{halfPoints}  #{@uitranslation("Damage Threshold")}: #{threshold}*    \n"""
         reddit
 
     toTTSText: ->
@@ -6682,32 +6718,29 @@ class Ship
 
     restriction_check: (restrictions, upgrade_obj, points, current_upgrade_points) ->
         effective_stats = @effectiveStats()
-        if @pilot.pointsupg? and (points + current_upgrade_points > @pilot.pointsupg)
+        if @pilot.loadout? and (points + current_upgrade_points > @pilot.loadout)
             return false
         else
             if restrictions?
                 for r in restrictions
-                    if r[0] == "orUnique"
-                        if @checkListForUnique(r[1].toLowerCase().replace(/[^0-9a-z]/gi, '').replace(/\s+/g, '-'))
-                            return true
                     switch r[0]
-                        when "Base"  
-                            switch r[1]
-                                when "Small"
-                                    if @data.base? then return false
-                                when "Non-Small"
-                                    if not @data.base? then return false
-                                when "Small or Medium"
-                                    if not ((@data.base? and @data.base == "Medium") or not @data.base?) then return false
-                                when "Medium or Large"
-                                    if not (@data.base? and (@data.base == "Medium" or @data.base == "Large")) then return false
-                                when "Large or Huge" 
-                                    if not (@data.base? and (@data.base == "Large" or @data.base == "Huge")) then return false
-                                when "Standard"
-                                    if (@data.base? and @data.base == "Huge") then return false
-                                else
-                                    if not (@data.base? and @data.base == r[1]) then return false
-
+                        when "FactionOrUnique"
+                            if @pilot.faction != r[2] and not @checkListForUnique(r[1].toLowerCase().replace(/[^0-9a-z]/gi, '').replace(/\s+/g, '-')) then return false
+                        when "Base"
+                            check = false
+                            for b in r
+                                if b == "Base" then continue
+                                if b.startsWith("Non-") then base = b.substring(4) else base = b # check if its an non- case then remove the non-
+                                switch base
+                                    when "Small"
+                                        if not @data.base? then check = true
+                                    when "Standard"
+                                        if not (@data.base? and @data.base == "Huge") then check = true
+                                    else
+                                        if @data.base? and @data.base == base then check = true
+                                if b != base then check = !check # invert results for non- result
+                                if check == true then break
+                            return check
                         when "Action"
                             if r[1].startsWith("W-")
                                 w = r[1].substring(2)
@@ -6744,13 +6777,11 @@ class Ship
                                     if not (@data.name in exportObj.epicExclusionsList) then return false
                                 when "Standard"
                                     if @data.name in exportObj.epicExclusionsList then return false
-                        when "Faction"
-                            if @pilot.faction != r[1] then return false
             return true
 
     doesSlotExist: (slot) ->
         for upgrade in @upgrades
-            if exportObj.slotsMatching(slot, upgrade.slot)
+            if exportObj.slotsMatching(upgrade.slot, slot)
                 return true
         false
     
@@ -7152,6 +7183,7 @@ class GenericAddon
                 if @data.forcerecurring?
                     forcerecurring = @data.forcerecurring
                 count = 0
+                recurringicon = ''
                 while count < forcerecurring
                     recurringicon += '<sup><i class="fas fa-caret-up"></i></sup>'
                     ++count
