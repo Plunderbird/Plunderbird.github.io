@@ -2105,7 +2105,6 @@ exportObj.basicCardData = ->
             loadout: 4
             slots: [
                 "Astromech"
-                "Illicit"
                 "Configuration"
             ]
         }
@@ -2120,7 +2119,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Astromech"
-                "Illicit"
                 "Configuration"
             ]
         }
@@ -2137,7 +2135,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Torpedo"
                 "Astromech"
-                "Illicit"
                 "Configuration"
             ]
         }
@@ -2157,7 +2154,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Torpedo"
                 "Astromech"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -2176,7 +2172,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Torpedo"
                 "Astromech"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -2196,7 +2191,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Torpedo"
                 "Astromech"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -2213,7 +2207,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Torpedo"
                 "Astromech"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -2247,7 +2240,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Torpedo"
                 "Astromech"
-                "Illicit"
                 "Configuration"
             ]
         }
@@ -2307,7 +2299,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Missile"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -2327,7 +2318,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Force"
                 "Crew"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -2345,7 +2335,6 @@ exportObj.basicCardData = ->
             keyword: ["Spectre"]
             slots: [
                 "Crew"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -2362,7 +2351,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Talent"
-                "Illicit"
                 "Modification"
             ]
             applies_condition: 'Suppressive Fire'.canonicalize()
@@ -2383,7 +2371,6 @@ exportObj.basicCardData = ->
                 "Crew"
                 "Device"
                 "Device"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -2403,7 +2390,6 @@ exportObj.basicCardData = ->
                 "Gunner"
                 "Crew"
                 "Device"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -2426,7 +2412,6 @@ exportObj.basicCardData = ->
                 "Gunner"
                 "Device"
                 "Device"
-                "Illicit"
             ]
         }
         {
@@ -2445,7 +2430,6 @@ exportObj.basicCardData = ->
                 "Sensor"
                 "Torpedo"
                 "Astromech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -2464,7 +2448,6 @@ exportObj.basicCardData = ->
                 "Sensor"
                 "Torpedo"
                 "Astromech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -2480,7 +2463,6 @@ exportObj.basicCardData = ->
                 "Sensor"
                 "Torpedo"
                 "Astromech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -2496,7 +2478,6 @@ exportObj.basicCardData = ->
                 "Tech"
                 "Torpedo"
                 "Astromech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -2517,7 +2498,6 @@ exportObj.basicCardData = ->
                 "Torpedo"
                 "Missile"
                 "Astromech"
-                "Illicit"
                 "Modification"
                 "Device"
             ]
@@ -2538,7 +2518,6 @@ exportObj.basicCardData = ->
                 "Missile"
                 "Astromech"
                 "Device"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -2559,7 +2538,6 @@ exportObj.basicCardData = ->
                 "Astromech"
                 "Device"
                 "Device"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -2579,7 +2557,6 @@ exportObj.basicCardData = ->
                 "Missile"
                 "Astromech"
                 "Device"
-                "Illicit"
                 "Modification"
                 "Modification"
             ]
@@ -2595,7 +2572,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Turret"
                 "Missile"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -2626,7 +2602,6 @@ exportObj.basicCardData = ->
                 "Sensor"
                 "Crew"
                 "Crew"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -2644,7 +2619,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Sensor"
                 "Crew"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -2663,7 +2637,6 @@ exportObj.basicCardData = ->
                 "Sensor"
                 "Crew"
                 "Crew"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -2884,7 +2857,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Missile"
                 "Gunner"
-                "Illicit"
             ]
         }
         {
@@ -2901,7 +2873,6 @@ exportObj.basicCardData = ->
                 "Crew"
                 "Device"
                 "Device"
-                "Illicit"
                 "Modification"
                 "Modification"
                 "Title"
@@ -2920,7 +2891,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Crew"
                 "Device"
-                "Illicit"
                 "Modification"
                 "Modification"
                 "Title"
@@ -2940,7 +2910,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Crew"
                 "Device"
-                "Illicit"
                 "Modification"
                 "Title"
             ]
@@ -2955,7 +2924,6 @@ exportObj.basicCardData = ->
             loadout: 6
             slots: [
                 "Device"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -2972,7 +2940,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Talent"
                 "Missile"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -2989,7 +2956,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Talent"
-                "Illicit"
                 "Configuration"
             ]
         }
@@ -3017,7 +2983,6 @@ exportObj.basicCardData = ->
             loadout: 3
             slots: [
                 "Talent"
-                "Illicit"
                 "Configuration"
             ]
         }
@@ -3034,7 +2999,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Sensor"
                 "Torpedo"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -3050,7 +3014,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Talent"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -3064,7 +3027,6 @@ exportObj.basicCardData = ->
             loadout: 4
             slots: [
                 "Talent"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -3078,7 +3040,6 @@ exportObj.basicCardData = ->
             loadout: 5
             slots: [
                 "Missile"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -3095,7 +3056,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Crew"
                 "Crew"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -3112,7 +3072,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Crew"
                 "Crew"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -3126,7 +3085,6 @@ exportObj.basicCardData = ->
             loadout: 6
             slots: [
                 "Crew"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -3150,7 +3108,6 @@ exportObj.basicCardData = ->
                 "Crew"
                 "Crew"
                 "Gunner"
-                "Illicit"
                 "Modification"
                 "Title"
             ]
@@ -3174,7 +3131,6 @@ exportObj.basicCardData = ->
                 "Crew"
                 "Crew"
                 "Gunner"
-                "Illicit"
                 "Modification"
                 "Title"
             ]
@@ -3196,7 +3152,6 @@ exportObj.basicCardData = ->
                 "Crew"
                 "Crew"
                 "Gunner"
-                "Illicit"
                 "Modification"
                 "Title"
             ]
@@ -3213,7 +3168,6 @@ exportObj.basicCardData = ->
                 "Turret"
                 "Torpedo"
                 "Gunner"
-                "Illicit"
             ]
         }
         {
@@ -3230,7 +3184,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Turret"
                 "Crew"
-                "Illicit"
                 "Modification"
                 "Title"
             ]
@@ -3250,7 +3203,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Turret"
                 "Crew"
-                "Illicit"
                 "Modification"
                 "Title"
             ]
@@ -3270,7 +3222,6 @@ exportObj.basicCardData = ->
                 "Force"
                 "Turret"
                 "Crew"
-                "Illicit"
                 "Modification"
                 "Title"
             ]
@@ -3290,7 +3241,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Turret"
                 "Crew"
-                "Illicit"
                 "Modification"
                 "Title"
             ]
@@ -3311,7 +3261,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Crew"
                 "Astromech"
-                "Illicit"
                 "Modification"
                 "Title"
             ]
@@ -3333,7 +3282,6 @@ exportObj.basicCardData = ->
                 "Force"
                 "Crew"
                 "Astromech"
-                "Illicit"
                 "Modification"
                 "Title"
             ]
@@ -3354,7 +3302,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Crew"
                 "Astromech"
-                "Illicit"
                 "Modification"
                 "Title"
             ]
@@ -3373,7 +3320,6 @@ exportObj.basicCardData = ->
                 "Crew"
                 "Modification"
                 "Astromech"
-                "Illicit"
                 "Title"
             ]
         }
@@ -3393,7 +3339,6 @@ exportObj.basicCardData = ->
                 "Cannon"
                 "Torpedo"
                 "Device"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -3414,7 +3359,6 @@ exportObj.basicCardData = ->
                 "Cannon"
                 "Torpedo"
                 "Device"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -3432,7 +3376,6 @@ exportObj.basicCardData = ->
                 "Cannon"
                 "Cannon"
                 "Torpedo"
-                "Illicit"
                 "Configuration"
             ]
         }
@@ -3449,7 +3392,6 @@ exportObj.basicCardData = ->
                 "Cannon"
                 "Cannon"
                 "Device"
-                "Illicit"
                 "Configuration"
             ]
         }
@@ -3469,7 +3411,6 @@ exportObj.basicCardData = ->
                 "Crew"
                 "Gunner"
                 "Astromech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -3490,7 +3431,6 @@ exportObj.basicCardData = ->
                 "Crew"
                 "Gunner"
                 "Astromech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -3511,7 +3451,6 @@ exportObj.basicCardData = ->
                 "Crew"
                 "Gunner"
                 "Astromech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -3531,7 +3470,6 @@ exportObj.basicCardData = ->
                 "Crew"
                 "Gunner"
                 "Astromech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -3780,7 +3718,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Crew"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -3796,7 +3733,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Crew"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -3815,7 +3751,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Crew"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -3847,7 +3782,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Talent"
                 "Torpedo"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -3865,7 +3799,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Talent"
                 "Torpedo"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -3882,7 +3815,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Missile"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -3900,7 +3832,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Missile"
                 "Torpedo"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -3915,7 +3846,6 @@ exportObj.basicCardData = ->
             keyword: ["Mandalorian"]
             slots: [
                 "Torpedo"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -3931,7 +3861,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Modification"
                 "Modification"
-                "Illicit"
             ]
         }
         {
@@ -4326,7 +4255,6 @@ exportObj.basicCardData = ->
             loadout: 3
             slots: [
                 "Talent"
-                "Illicit"
             ]
         }
         {
@@ -4463,7 +4391,6 @@ exportObj.basicCardData = ->
             loadout: 3
             slots: [
                 "Missile"
-                "Illicit"
             ]
         }
         {
@@ -4478,7 +4405,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Talent"
-                "Illicit"
                 "Modification"
                 "Modification"
                 "HardpointShip"
@@ -4495,7 +4421,6 @@ exportObj.basicCardData = ->
             loadout: 14
             slots: [
                 "Talent"
-                "Illicit"
                 "Modification"
                 "HardpointShip"
             ]
@@ -4511,7 +4436,6 @@ exportObj.basicCardData = ->
             loadout: 7
             slots: [
                 "Talent"
-                "Illicit"
                 "Modification"
                 "HardpointShip"
             ]
@@ -4528,7 +4452,6 @@ exportObj.basicCardData = ->
             keyword: ["Bounty Hunter"]
             slots: [
                 "Talent"
-                "Illicit"
                 "Modification"
                 "HardpointShip"
             ]
@@ -4542,7 +4465,6 @@ exportObj.basicCardData = ->
             points: 3
             loadout: 3
             slots: [
-            	 "Illicit"
                 "Modification"
                 "HardpointShip"
             ]
@@ -4557,7 +4479,6 @@ exportObj.basicCardData = ->
             points: 3
             loadout: 6
             slots: [
-            	"Illicit"
                 "Modification"
                 "HardpointShip"
             ]
@@ -4572,7 +4493,6 @@ exportObj.basicCardData = ->
             points: 3
             loadout: 5
             slots: [
-            	"Illicit"
                 "Modification"
                 "HardpointShip"
             ]
@@ -4586,7 +4506,6 @@ exportObj.basicCardData = ->
             points: 3
             loadout: 4
             slots: [
-            	"Illicit"
                 "Modification"
                 "HardpointShip"
             ]
@@ -4677,7 +4596,6 @@ exportObj.basicCardData = ->
                 "Gunner"
                 "Device"
                 "Device"
-                "Illicit"
                 "Modification"
                 "Title"
             ]
@@ -4698,7 +4616,6 @@ exportObj.basicCardData = ->
                 "Gunner"
                 "Device"
                 "Device"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -4715,7 +4632,6 @@ exportObj.basicCardData = ->
                 "Gunner"
                 "Device"
                 "Device"
-                "Illicit"
             ]
         }
         {
@@ -4732,7 +4648,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Tech"
                 "Torpedo"
-                "Illicit"
                 "Modification"
                 "Title"
             ]
@@ -4750,7 +4665,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Tech"
                 "Torpedo"
-                "Illicit"
                 "Modification"
                 "Title"
             ]
@@ -4771,7 +4685,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Tech"
                 "Torpedo"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -4785,7 +4698,6 @@ exportObj.basicCardData = ->
             loadout: 6
             slots: [
                 "Tech"
-                "Illicit"
             ]
         }
         {
@@ -4798,7 +4710,6 @@ exportObj.basicCardData = ->
             loadout: 6
             slots: [
                 "Tech"
-                "Illicit"
             ]
         }
         {
@@ -4877,7 +4788,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Cannon"
                 "Missile"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -4982,7 +4892,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Sensor"
                 "Torpedo"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -5000,7 +4909,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Sensor"
                 "Missile"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -5016,7 +4924,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Sensor"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -5032,7 +4939,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Sensor"
                 "Cannon"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -5051,7 +4957,6 @@ exportObj.basicCardData = ->
                 "Cannon"
                 "Crew"
                 "Crew"
-                "Illicit"
                 "Modification"
                 "Title"
             ]
@@ -5070,7 +4975,6 @@ exportObj.basicCardData = ->
                 "Cannon"
                 "Crew"
                 "Crew"
-                "Illicit"
                 "Modification"
                 "Title"
             ]
@@ -5090,7 +4994,6 @@ exportObj.basicCardData = ->
                 "Cannon"
                 "Cannon"
                 "Crew"
-                "Illicit"
                 "Modification"
                 "Title"
             ]
@@ -5106,7 +5009,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Sensor"
                 "Cannon"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -5127,7 +5029,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Sensor"
                 "Missile"
-                "Illicit"
             ]
         }
         {
@@ -5147,7 +5048,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Sensor"
                 "Missile"
-                "Illicit"
             ]
         }
         {
@@ -5163,7 +5063,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Force"
                 "Sensor"
-                "Illicit"
             ]
         }
         {
@@ -5178,7 +5077,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Sensor"
                 "Missile"
-                "Illicit"
             ]
         }
         {
@@ -5199,7 +5097,6 @@ exportObj.basicCardData = ->
                 "Tech"
                 "Sensor"
                 "Missile"
-                "Illicit"
                 "Modification"
                 "Modification"
             ]
@@ -5218,7 +5115,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Sensor"
                 "Missile"
-                "Illicit"
                 "Modification"
                 "Modification"
             ]
@@ -5237,7 +5133,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Sensor"
                 "Missile"
-                "Illicit"
                 "Modification"
                 "Modification"
             ]
@@ -5255,7 +5150,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Sensor"
                 "Missile"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -5270,7 +5164,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Sensor"
                 "Missile"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -5284,7 +5177,6 @@ exportObj.basicCardData = ->
             loadout: 4
             slots: [
                 "Sensor"
-                "Illicit"
                 "Modification"
                 "Modification"
             ]
@@ -5301,7 +5193,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Talent"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -5318,7 +5209,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Talent"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -5333,7 +5223,6 @@ exportObj.basicCardData = ->
             loadout: 3
             slots: [
                 "Talent"
-                "Illicit"
                 "Configuration"
             ]
         }
@@ -5347,7 +5236,6 @@ exportObj.basicCardData = ->
             loadout: 2
             slots: [
                 "Talent"
-                "Illicit"
                 "Configuration"
             ]
         }
@@ -5364,7 +5252,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Crew"
                 "Crew"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -5380,7 +5267,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Crew"
-                "Illicit"
                 "Modification"
                 "Modification"
             ]
@@ -5397,7 +5283,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Crew"
                 "Crew"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -5411,7 +5296,6 @@ exportObj.basicCardData = ->
             loadout: 6
             slots: [
                 "Crew"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -5430,7 +5314,6 @@ exportObj.basicCardData = ->
                 "Missile"
                 "Missile"
                 "Gunner"
-                "Illicit"
                 "Modification"
                 "Modification"
             ]
@@ -5450,7 +5333,6 @@ exportObj.basicCardData = ->
                 "Missile"
                 "Missile"
                 "Gunner"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -5467,7 +5349,6 @@ exportObj.basicCardData = ->
                 "Turret"
                 "Missile"
                 "Gunner"
-                "Illicit"
             ]
         }
         {
@@ -5482,7 +5363,6 @@ exportObj.basicCardData = ->
                 "Turret"
                 "Missile"
                 "Gunner"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -5502,7 +5382,6 @@ exportObj.basicCardData = ->
                 "Missile"
                 "Gunner"
                 "Device"
-                "Illicit"
                 "Modification"
                 "Modification"
             ]
@@ -5524,7 +5403,6 @@ exportObj.basicCardData = ->
                 "Gunner"
                 "Device"
                 "Device"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -5542,7 +5420,6 @@ exportObj.basicCardData = ->
                 "Missile"
                 "Gunner"
                 "Device"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -5560,7 +5437,6 @@ exportObj.basicCardData = ->
                 "Sensor"
                 "Cannon"
                 "Missile"
-                "Illicit"
                 "Configuration"
             ]
         }
@@ -5579,7 +5455,6 @@ exportObj.basicCardData = ->
                 "Sensor"
                 "Cannon"
                 "Missile"
-                "Illicit"
                 "Configuration"
             ]
         }
@@ -5598,7 +5473,6 @@ exportObj.basicCardData = ->
                 "Cannon"
                 "Missile"
                 "Missile"
-                "Illicit"
                 "Configuration"
             ]
         }
@@ -5615,7 +5489,6 @@ exportObj.basicCardData = ->
                 "Sensor"
                 "Cannon"
                 "Missile"
-                "Illicit"
                 "Configuration"
             ]
         }
@@ -5630,7 +5503,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Sensor"
                 "Cannon"
-                "Illicit"
                 "Configuration"
             ]
         }
@@ -5647,7 +5519,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Sensor"
                 "Gunner"
-                "Illicit"
                 "Modification"
                 "Modification"
             ]
@@ -5666,7 +5537,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Sensor"
                 "Gunner"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -5682,7 +5552,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Sensor"
                 "Gunner"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -5697,7 +5566,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Sensor"
                 "Gunner"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -5718,7 +5586,6 @@ exportObj.basicCardData = ->
                 "Gunner"
                 "Device"
                 "Device"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -5739,7 +5606,6 @@ exportObj.basicCardData = ->
                 "Gunner"
                 "Device"
                 "Device"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -5760,7 +5626,6 @@ exportObj.basicCardData = ->
                 "Gunner"
                 "Device"
                 "Device"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -5779,7 +5644,6 @@ exportObj.basicCardData = ->
                 "Missile"
                 "Gunner"
                 "Device"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -5796,7 +5660,6 @@ exportObj.basicCardData = ->
                 "Gunner"
                 "Device"
                 "Device"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -5813,7 +5676,6 @@ exportObj.basicCardData = ->
                 "Gunner"
                 "Device"
                 "Device"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -5831,7 +5693,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Gunner"
                 "Device"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -5848,7 +5709,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Gunner"
                 "Device"
-                "Illicit"
                 "Modification"
                 "Modification"
             ]
@@ -5867,7 +5727,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Gunner"
                 "Device"
-                "Illicit"
                 "Modification"
                 "Modification"
             ]
@@ -5884,7 +5743,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Gunner"
                 "Device"
-                "Illicit"
             ]
         }
         {
@@ -5898,7 +5756,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Gunner"
                 "Device"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -5919,7 +5776,6 @@ exportObj.basicCardData = ->
                 "Crew"
                 "Gunner"
                 "Device"
-                "Illicit"
                 "Modification"
                 "Title"
             ]
@@ -5941,7 +5797,6 @@ exportObj.basicCardData = ->
                 "Crew"
                 "Gunner"
                 "Device"
-                "Illicit"
                 "Modification"
                 "Title"
             ]
@@ -5959,7 +5814,6 @@ exportObj.basicCardData = ->
                 "Crew"
                 "Gunner"
                 "Device"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -5975,7 +5829,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Talent"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -5994,7 +5847,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Cannon"
                 "Missile"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -6010,7 +5862,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Cannon"
-                "Illicit"
             ]
         }
         {
@@ -6024,7 +5875,6 @@ exportObj.basicCardData = ->
             loadout: 3
             slots: [
                 "Talent"
-                "Illicit"
             ]
         }
         {
@@ -6040,7 +5890,6 @@ exportObj.basicCardData = ->
             loadout: 2
             slots: [
                 "Talent"
-                "Illicit"
             ]
         }
         {
@@ -6055,7 +5904,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Cannon"
-                "Illicit"
             ]
         }
         {
@@ -6071,7 +5919,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Talent"
                 "Missile"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -6086,7 +5933,6 @@ exportObj.basicCardData = ->
             loadout: 3
             slots: [
                 "Talent"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -6101,7 +5947,6 @@ exportObj.basicCardData = ->
             loadout: 1
             slots: [
                 "Talent"
-                "Illicit"
             ]
         }
         {
@@ -6116,7 +5961,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Talent"
-                "Illicit"
             ]
         }
         {
@@ -6129,7 +5973,6 @@ exportObj.basicCardData = ->
             loadout: 2
             slots: [
                 "Talent"
-                "Illicit"
             ]
         }
         {
@@ -6152,7 +5995,6 @@ exportObj.basicCardData = ->
             points: 2
             loadout: 3
             slots: [
-            	 "Illicit"
                 "Modification"
             ]
         }
@@ -6185,7 +6027,6 @@ exportObj.basicCardData = ->
                 "Astromech"
                 "Tech"
                 "Torpedo"
-                "Illicit"
                 "Modification"
                 "Modification"
                 "Configuration"
@@ -6211,7 +6052,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Missile"
                 "Tech"
-                "Illicit"
                 "Modification"
                 "Modification"
             ]
@@ -6230,7 +6070,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Tech"
                 "Tech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -6245,7 +6084,6 @@ exportObj.basicCardData = ->
             loadout: 9
             slots: [
                 "Tech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -6266,7 +6104,6 @@ exportObj.basicCardData = ->
                 "Tech"
                 "Torpedo"
                 "Missile"
-                "Illicit"
                 "Configuration"
             ]
         }
@@ -6285,7 +6122,6 @@ exportObj.basicCardData = ->
                 "Tech"
                 "Torpedo"
                 "Missile"
-                "Illicit"
                 "Configuration"
             ]
         }
@@ -6307,7 +6143,6 @@ exportObj.basicCardData = ->
                 "Crew"
                 "Crew"
                 "Cannon"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -6324,7 +6159,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Talent"
                 "Tech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -6345,7 +6179,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Torpedo"
                 "Tech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -6369,7 +6202,6 @@ exportObj.basicCardData = ->
                 "Tech"
                 "Missile"
                 "Gunner"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -6390,7 +6222,6 @@ exportObj.basicCardData = ->
                 "Tech"
                 "Gunner"
                 "Sensor"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -6477,7 +6308,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Cannon"
                 "Missile"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -6491,7 +6321,6 @@ exportObj.basicCardData = ->
             loadout: 1
             slots: [
                 "Talent"
-                "Illicit"
             ]
         }
         {
@@ -6528,7 +6357,6 @@ exportObj.basicCardData = ->
                 "Gunner"
                 "Device"
                 "Device"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -6549,7 +6377,6 @@ exportObj.basicCardData = ->
                 "Crew"
                 "Cannon"
                 "Sensor"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -6567,7 +6394,6 @@ exportObj.basicCardData = ->
                 "Astromech"
                 "Tech"
                 "Cannon"
-                "Illicit"
                 "Modification"
                 "Configuration"
                 "HardpointShip"
@@ -6586,7 +6412,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Astromech"
                 "Tech"
-                "Illicit"
                 "Modification"
                 "Configuration"
                 "HardpointShip"
@@ -6604,7 +6429,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Astromech"
                 "Tech"
-                "Illicit"
                 "Modification"
                 "Configuration"
                 "HardpointShip"
@@ -6622,7 +6446,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Astromech"
                 "Tech"
-                "Illicit"
                 "Modification"
                 "Configuration"
                 "HardpointShip"
@@ -6641,7 +6464,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Astromech"
                 "Tech"
-                "Illicit"
                 "Modification"
                 "Configuration"
                 "HardpointShip"
@@ -6659,7 +6481,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Astromech"
                 "Tech"
-                "Illicit"
                 "Modification"
                 "Configuration"
                 "HardpointShip"
@@ -6676,7 +6497,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Astromech"
                 "Tech"
-                "Illicit"
                 "Modification"
                 "Configuration"
                 "HardpointShip"
@@ -6695,7 +6515,6 @@ exportObj.basicCardData = ->
                 "Tech"
                 "Gunner"
                 "Sensor"
-                "Illicit"
             ]
         }
         {
@@ -6713,7 +6532,6 @@ exportObj.basicCardData = ->
                 "Gunner"
                 "Device"
                 "Device"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -6728,7 +6546,6 @@ exportObj.basicCardData = ->
             loadout: 5
             slots: [
                 "Tech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -6745,7 +6562,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Talent"
                 "Tech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -6762,7 +6578,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Tech"
                 "Tech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -6780,7 +6595,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Tech" 
                 "Cannon"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -6795,8 +6609,7 @@ exportObj.basicCardData = ->
             loadout: 4
             slots: [ 
                 "Talent"
-                "Tech"
-                "Illicit"
+                "Tech" 
                 "Modification"
             ]
         }
@@ -6815,7 +6628,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Missile"
                 "Tech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -6830,7 +6642,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Tech"
-                "Illicit"
                 "Modification"
                 "Modification"
             ]
@@ -6845,7 +6656,6 @@ exportObj.basicCardData = ->
             loadout: 3
             slots: [
                 "Tech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -6859,7 +6669,6 @@ exportObj.basicCardData = ->
             loadout: 2
             slots: [
                 "Tech"
-                "Illicit"
             ]
         }
         {
@@ -6875,7 +6684,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Missile"
                 "Tech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -6894,7 +6702,6 @@ exportObj.basicCardData = ->
                 "Missile"
                 "Tech"
                 "Tech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -6917,7 +6724,6 @@ exportObj.basicCardData = ->
                 "Crew"
                 "Crew"
                 "Device"
-                "Illicit"
                 "Modification"
                 "Title"
                 "Tactical Relay"
@@ -6939,7 +6745,6 @@ exportObj.basicCardData = ->
                 "Force"
                 "Talent"
                 "Astromech"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -6958,7 +6763,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Force"
                 "Astromech"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -6977,7 +6781,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Force"
                 "Astromech"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -6996,7 +6799,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Force"
                 "Astromech"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -7014,7 +6816,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Force"
                 "Astromech"
-                "Illicit"
                 "Configuration"
                 "Modification"
             ]
@@ -7035,7 +6836,6 @@ exportObj.basicCardData = ->
                 "Force"
                 "Talent"
                 "Astromech"
-                "Illicit"
                 "Configuration"
                 "Modification"
                 "Modification"
@@ -7051,7 +6851,6 @@ exportObj.basicCardData = ->
             loadout: 0
             keyword: ["Droid"]
             slots: [
-            	"Illicit"
                 "Configuration"
                 "Modification"
             ]
@@ -7073,7 +6872,6 @@ exportObj.basicCardData = ->
                 "Gunner"
                 "Gunner"
                 "Astromech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -7097,7 +6895,6 @@ exportObj.basicCardData = ->
                 "Cannon"
                 "Cannon"
                 "Sensor"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -7120,7 +6917,6 @@ exportObj.basicCardData = ->
                 "Crew"
                 "Cannon"
                 "Sensor"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -7138,7 +6934,6 @@ exportObj.basicCardData = ->
                 "Tech"
                 "Torpedo"
                 "Missile"
-                "Illicit"
                 "Configuration"
             ]
         }
@@ -7156,7 +6951,6 @@ exportObj.basicCardData = ->
                 "Tech"
                 "Torpedo"
                 "Missile"
-                "Illicit"
                 "Configuration"
             ]
         }
@@ -7173,7 +6967,6 @@ exportObj.basicCardData = ->
                 "Missile"
                 "Gunner"
                 "Sensor"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -7189,7 +6982,6 @@ exportObj.basicCardData = ->
                 "Tech"
                 "Torpedo"
                 "Missile"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -7207,7 +6999,6 @@ exportObj.basicCardData = ->
                 "Tech"
                 "Torpedo"
                 "Missile"
-                "Illicit"
                 "Configuration"
             ]
         }
@@ -7226,7 +7017,6 @@ exportObj.basicCardData = ->
                 "Crew"
                 "Cannon"
                 "Sensor"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -7248,7 +7038,6 @@ exportObj.basicCardData = ->
                 "Crew"
                 "Cannon"
                 "Sensor"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -7266,7 +7055,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Tech"
                 "Tech"
-                "Illicit"
             ]
         }
         {
@@ -7287,7 +7075,6 @@ exportObj.basicCardData = ->
                 "Gunner"
                 "Device"
                 "Device"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -7309,7 +7096,6 @@ exportObj.basicCardData = ->
                 "Gunner"
                 "Device"
                 "Device"
-                "Illicit"
                 "Modification"
             ]
             applies_condition: 'Rattled'.canonicalize()
@@ -7332,7 +7118,6 @@ exportObj.basicCardData = ->
                 "Gunner"
                 "Device"
                 "Device"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -7353,7 +7138,6 @@ exportObj.basicCardData = ->
                 "Gunner"
                 "Device"
                 "Device"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -7369,7 +7153,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Missile"
                 "Gunner"
-                "Illicit"
                 "Modification"
                 "Modification"
             ]
@@ -7388,7 +7171,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Tech"
                 "Astromech"
-                "Illicit"
                 "Modification"
                 "Configuration"
                 "HardpointShip"
@@ -7407,7 +7189,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Tech"
                 "Astromech"
-                "Illicit"
                 "Modification"
                 "Modification"
                 "Configuration"
@@ -7428,7 +7209,6 @@ exportObj.basicCardData = ->
                 "Tech"
                 "Missile"
                 "Astromech"
-                "Illicit"
                 "Modification"
                 "Configuration"
                 "HardpointShip"
@@ -7448,7 +7228,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Tech"
                 "Astromech"
-                "Illicit"
                 "Modification"
                 "Configuration"
                 "HardpointShip"
@@ -7466,7 +7245,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Talent"
                 "Tech"
-                "Illicit"
             ]
         }
         {
@@ -7480,7 +7258,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Tech"
-                "Illicit"
             ]
         }
         {
@@ -7494,7 +7271,6 @@ exportObj.basicCardData = ->
             loadout: 6
             slots: [
                 "Talent"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -7511,7 +7287,6 @@ exportObj.basicCardData = ->
             points: 3
             slots: [
                 "Missile"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -7539,7 +7314,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Missile"
-                "Illicit"
                 "Modification"
                 "Modification"
                 "Title"
@@ -7556,7 +7330,6 @@ exportObj.basicCardData = ->
             loadout: 7
             slots: [
                 "Talent"
-                "Illicit"
                 "Tactical Relay"
                 "Modification"
                 "Modification"
@@ -7572,7 +7345,6 @@ exportObj.basicCardData = ->
             loadout: 5
             keyword: ["Droid"]
             slots: [
-            	"Illicit"
                 "Tactical Relay"
                 "Modification"
             ]
@@ -7587,7 +7359,6 @@ exportObj.basicCardData = ->
             points: 5
             loadout: 15
             slots: [
-            	"Illicit"
                 "Tactical Relay"
                 "Modification"
                 "Modification"
@@ -7605,7 +7376,6 @@ exportObj.basicCardData = ->
             keyword: ["Droid"]
             slots: [
                 "Cannon"
-                "Illicit"
                 "Configuration"
                 "Modification"
             ]
@@ -7622,7 +7392,6 @@ exportObj.basicCardData = ->
             keyword: ["Droid"]
             slots: [
                 "Missile"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -7639,7 +7408,6 @@ exportObj.basicCardData = ->
             keyword: ["Droid"]
             slots: [
                 "Missile"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -7659,7 +7427,6 @@ exportObj.basicCardData = ->
                 "Force"
                 "Talent"
                 "Astromech"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -7678,7 +7445,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Force"
                 "Astromech"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -7698,7 +7464,6 @@ exportObj.basicCardData = ->
                 "Force"
                 "Force"
                 "Astromech"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -7716,7 +7481,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Missile"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -7734,7 +7498,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Torpedo"
                 "Missile"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -7752,7 +7515,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Missile"
                 "Missile"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -7769,7 +7531,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Missile"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -7787,7 +7548,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Missile"
                 "Missile"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -7802,7 +7562,6 @@ exportObj.basicCardData = ->
             keyword: ["Clone"]
             slots: [
                 "Missile"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -7818,7 +7577,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Missile"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -7840,7 +7598,6 @@ exportObj.basicCardData = ->
                 "Sensor"
                 "Astromech"
                 "Torpedo"
-                "Illicit"
             ]
         }
         {
@@ -7855,7 +7612,6 @@ exportObj.basicCardData = ->
                 "Sensor"
                 "Astromech"
                 "Torpedo"
-                "Illicit"
             ]
         }
         {
@@ -7870,7 +7626,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Torpedo"
                 "Device"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -7888,7 +7643,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Device"
                 "Device"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -7907,7 +7661,6 @@ exportObj.basicCardData = ->
                 "Torpedo"
                 "Missile"
                 "Device"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -7924,7 +7677,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Missile"
                 "Device"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -7941,7 +7693,6 @@ exportObj.basicCardData = ->
             keyword: ["Droid"]
             slots: [
                 "Sensor"
-                "Illicit"
                 "Tactical Relay"
                 "Modification"
                 "Configuration"
@@ -7969,7 +7720,6 @@ exportObj.basicCardData = ->
                 "Sensor"
                 "Missile"
                 "Missile"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -7987,7 +7737,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Sensor"
                 "Astromech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -8006,7 +7755,6 @@ exportObj.basicCardData = ->
                 "Sensor"
                 "Astromech"
                 "Torpedo"
-                "Illicit"
             ]
         }
         {
@@ -8024,7 +7772,6 @@ exportObj.basicCardData = ->
                 "Sensor"
                 "Astromech"
                 "Torpedo"
-                "Illicit"
             ]
         }
         {
@@ -8042,7 +7789,6 @@ exportObj.basicCardData = ->
                 "Sensor"
                 "Astromech"
                 "Torpedo"
-                "Illicit"
             ]
         }
         {
@@ -8063,7 +7809,6 @@ exportObj.basicCardData = ->
                 "Crew"
                 "Crew"
                 "Device"
-                "Illicit"
                 "Modification"
                 "Title"
                 "Tactical Relay"
@@ -8085,7 +7830,6 @@ exportObj.basicCardData = ->
                 "Torpedo"
                 "Crew"
                 "Device"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -8101,7 +7845,6 @@ exportObj.basicCardData = ->
                 "Cannon"
                 "Torpedo"
                 "Device"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -8117,7 +7860,6 @@ exportObj.basicCardData = ->
             keyword: ["Droid"]
             slots: [
                 "Missile"
-                "Illicit"
                 "Modification"
                 "Modification"
                 "Configuration"
@@ -8143,7 +7885,6 @@ exportObj.basicCardData = ->
                 "Gunner"
                 "Gunner"
                 "Astromech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -8163,7 +7904,6 @@ exportObj.basicCardData = ->
                 "Gunner"
                 "Gunner"
                 "Astromech"
-                "Illicit"
                 "Modification"
                 "Modification"
             ]
@@ -8182,7 +7922,6 @@ exportObj.basicCardData = ->
                 "Gunner"
                 "Gunner"
                 "Astromech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -8200,7 +7939,6 @@ exportObj.basicCardData = ->
                 "Gunner"
                 "Gunner"
                 "Astromech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -8221,7 +7959,6 @@ exportObj.basicCardData = ->
                 "Gunner"
                 "Gunner"
                 "Astromech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -8236,7 +7973,6 @@ exportObj.basicCardData = ->
             keyword: ["Droid"]
             slots: [
                 "Missile"
-                "Illicit"
                 "Configuration"
                 "Modification"
             ]
@@ -8251,7 +7987,6 @@ exportObj.basicCardData = ->
             loadout: 4
             slots: [
                 "Talent"
-                "Illicit"
                 "Modification"
                 "Modification"
             ]
@@ -8269,7 +8004,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Tech"
                 "Crew"
-                "Illicit"
                 "Modification"
                 "Modification"
             ]
@@ -8287,7 +8021,6 @@ exportObj.basicCardData = ->
                 "Crew"
                 "Astromech"
                 "Astromech"
-                "Illicit"
             ]
         }
         {
@@ -8308,7 +8041,6 @@ exportObj.basicCardData = ->
                 "Crew"
                 "Crew"
                 "Astromech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -8325,7 +8057,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Tech"
                 "Crew"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -8343,7 +8074,6 @@ exportObj.basicCardData = ->
                 "Tech"
                 "Tech"
                 "Crew"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -8361,7 +8091,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Tech"
                 "Crew"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -8383,7 +8112,6 @@ exportObj.basicCardData = ->
                 "Crew"
                 "Crew"
                 "Astromech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -8404,7 +8132,6 @@ exportObj.basicCardData = ->
                 "Missile"
                 "Crew"
                 "Astromech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -8418,7 +8145,6 @@ exportObj.basicCardData = ->
             loadout: 4
             slots: [
                 "Talent"
-                "Illicit"
             ]
         }
         {
@@ -8432,7 +8158,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Talent"
-                "Illicit"
             ]
         }
         {
@@ -8446,7 +8171,6 @@ exportObj.basicCardData = ->
             loadout: 9
             slots: [
                 "Talent"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -8462,7 +8186,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Talent"
-                "Illicit"
             ]
         }
         {
@@ -8478,7 +8201,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Talent"
                 "Talent"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -8494,7 +8216,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Talent"
-                "Illicit"
             ]
         }
         {
@@ -8517,7 +8238,6 @@ exportObj.basicCardData = ->
                 "Gunner"
                 "Astromech"
                 "Device"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -8536,7 +8256,6 @@ exportObj.basicCardData = ->
                 "Gunner"
                 "Astromech"
                 "Device"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -8555,7 +8274,6 @@ exportObj.basicCardData = ->
                 "Gunner"
                 "Astromech"
                 "Device"
-                "Illicit"
             ]
         }
         {
@@ -8576,7 +8294,6 @@ exportObj.basicCardData = ->
                 "Crew"
                 "Device"
                 "Device"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -8598,7 +8315,6 @@ exportObj.basicCardData = ->
                 "Device"
                 "Device"
                 "Device"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -8619,7 +8335,6 @@ exportObj.basicCardData = ->
                 "Gunner"
                 "Astromech"
                 "Device"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -8640,7 +8355,6 @@ exportObj.basicCardData = ->
                 "Gunner"
                 "Astromech"
                 "Device"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -8663,7 +8377,6 @@ exportObj.basicCardData = ->
                 "Torpedo"
                 "Gunner"
                 "Astromech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -8932,7 +8645,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Missile"
                 "Crew"
-                "Illicit"
                 "Modification"
                 "Title"
             ]
@@ -8947,7 +8659,6 @@ exportObj.basicCardData = ->
             loadout: 5
             slots: [
                 "Missile"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -8965,7 +8676,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Tech"
                 "Missile"
-                "Illicit"
                 "Modification"
                 "Modification"
             ]
@@ -8983,7 +8693,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Tech"
                 "Missile"
-                "Illicit"
                 "Modification"
                 "Modification"
             ]
@@ -9002,7 +8711,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Tech"
                 "Missile"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -9017,7 +8725,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Tech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -9036,7 +8743,6 @@ exportObj.basicCardData = ->
                 "Tech"
                 "Missile"
                 "Gunner"
-                "Illicit"
                 "Modification"
                 "Modification"
             ]
@@ -9055,7 +8761,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Tech"
                 "Missile"
-                "Illicit"
                 "Configuration"
             ]
         }
@@ -9075,7 +8780,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Missile"
                 "Tech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -9092,7 +8796,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Missile"
                 "Tech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -9115,7 +8818,6 @@ exportObj.basicCardData = ->
                 "Gunner"
                 "Device"
                 "Device"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -9133,7 +8835,6 @@ exportObj.basicCardData = ->
                 "Sensor"
                 "Crew"
                 "Crew"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -9154,7 +8855,6 @@ exportObj.basicCardData = ->
                 "Cannon"
                 "Torpedo"
                 "Device"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -9176,7 +8876,6 @@ exportObj.basicCardData = ->
                 "Turret"
                 "Crew"
                 "Crew"
-                "Illicit"
                 "Modification"
                 "Gunner"
                 "Title"
@@ -9199,7 +8898,6 @@ exportObj.basicCardData = ->
                 "Gunner"
                 "Crew"
                 "Crew"
-                "Illicit"
                 "Modification"
                 "Modification"
                 "Title"
@@ -9221,7 +8919,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Sensor"
                 "Cannon"
-                "Illicit"
             ]
         }
         {
@@ -9238,7 +8935,6 @@ exportObj.basicCardData = ->
                 "Gunner"
                 "Device"
                 "Device"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -9259,7 +8955,6 @@ exportObj.basicCardData = ->
                 "Crew"
                 "Gunner"
                 "Device"
-                "Illicit"
                 "Modification"
                 "Modification"
                 "Title"
@@ -9281,7 +8976,6 @@ exportObj.basicCardData = ->
                 "Missile"
                 "Gunner"
                 "Sensor"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -9316,7 +9010,6 @@ exportObj.basicCardData = ->
             loadout: 6
             keyword: ["Droid"]
             slots: [
-            	"Illicit"
                 "Modification"
                 "HardpointShip"
             ]
@@ -9353,7 +9046,6 @@ exportObj.basicCardData = ->
                 "Tech"
                 "Tech"
                 "Crew"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -9395,7 +9087,6 @@ exportObj.basicCardData = ->
                 "Tech"
                 "Crew"
                 "Crew"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -9416,7 +9107,6 @@ exportObj.basicCardData = ->
                 "Tech"
                 "Crew"
                 "Crew"
-                "Illicit"
                 "Modification"
                 "Modification"
             ]
@@ -9433,7 +9123,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Missile"
                 "Device"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -9462,7 +9151,6 @@ exportObj.basicCardData = ->
                 "Missile"
                 "Missile"
                 "Device"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -9482,7 +9170,6 @@ exportObj.basicCardData = ->
                 "Missile"
                 "Cannon"
                 "Cannon"
-                "Illicit"
                 "Tactical Relay"
                 "Modification"
                 "Configuration"
@@ -9504,7 +9191,6 @@ exportObj.basicCardData = ->
                 "Tactical Relay"
                 "Crew"
                 "Device"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -9525,7 +9211,6 @@ exportObj.basicCardData = ->
                 "Tactical Relay"
                 "Crew"
                 "Device"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -9544,7 +9229,6 @@ exportObj.basicCardData = ->
                 "Missile"
                 "Crew"
                 "Device"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -9567,7 +9251,6 @@ exportObj.basicCardData = ->
                 "Crew"
                 "Gunner"
                 "Gunner"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -9591,7 +9274,6 @@ exportObj.basicCardData = ->
                 "Crew"
                 "Gunner"
                 "Gunner"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -9615,7 +9297,6 @@ exportObj.basicCardData = ->
                 "Crew"
                 "Gunner"
                 "Gunner"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -9639,7 +9320,6 @@ exportObj.basicCardData = ->
                 "Crew"
                 "Gunner"
                 "Gunner"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -9654,7 +9334,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Cannon"
                 "Cannon"
-                "Illicit"
                 "Configuration"
             ]
         }
@@ -9669,7 +9348,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Cannon"
                 "Cannon"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -9688,7 +9366,6 @@ exportObj.basicCardData = ->
                 "Cannon"
                 "Cannon"
                 "Gunner"
-                "Illicit"
                 "Modification"
                 "Modification"
                 "Configuration"
@@ -9708,7 +9385,6 @@ exportObj.basicCardData = ->
                 "Cannon"
                 "Cannon"
                 "Gunner"
-                "Illicit"
                 "Modification"
                 "Modification"
                 "Configuration"
@@ -9727,7 +9403,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Sensor"
                 "Missile"
-                "Illicit"
                 "Modification"
                 "Modification"
                 "Configuration"
@@ -9747,7 +9422,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Sensor"
                 "Missile"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -9765,7 +9439,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Sensor"
                 "Cannon"
-                "Illicit"
                 "Modification"
                 "Modification"
                 "Configuration"
@@ -9784,7 +9457,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Sensor"
                 "Missile"
-                "Illicit"
                 "Modification"
                 "Modification"
                 "Configuration"
@@ -9800,7 +9472,6 @@ exportObj.basicCardData = ->
             loadout: 4
             slots: [
                 "Talent"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -9816,7 +9487,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Missile"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -9833,7 +9503,6 @@ exportObj.basicCardData = ->
                 "Cannon"
                 "Missile"
                 "Device"
-                "Illicit"
             ]
         }
         {
@@ -9912,7 +9581,6 @@ exportObj.basicCardData = ->
             points: 3
             loadout: 4
             slots: [
-            	"Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -9927,7 +9595,6 @@ exportObj.basicCardData = ->
             loadout: 3
             keyword: ["Clone"]
             slots: [
-            	"Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -9945,7 +9612,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Missile"
                 "Astromech"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -9965,7 +9631,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Astromech"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -9983,7 +9648,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Astromech"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -10004,7 +9668,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Torpedo"
                 "Astromech"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -10023,7 +9686,6 @@ exportObj.basicCardData = ->
                 "Force"
                 "Cannon"
                 "Astromech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -10043,7 +9705,6 @@ exportObj.basicCardData = ->
                 "Force"
                 "Cannon"
                 "Astromech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -10064,7 +9725,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Cannon"
                 "Astromech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -10085,7 +9745,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Cannon"
                 "Astromech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -10108,7 +9767,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Cannon"
                 "Astromech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -10131,7 +9789,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Cannon"
                 "Astromech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -10154,7 +9811,6 @@ exportObj.basicCardData = ->
                 "Tech"
                 "Tech"
                 "Astromech"
-                "Illicit"
                 "Modification"
                 "Configuration"
                 "HardpointShip"
@@ -10176,7 +9832,6 @@ exportObj.basicCardData = ->
                 "Tech"
                 "Tech"
                 "Astromech"
-                "Illicit"
                 "Modification"
                 "Configuration"
                 "HardpointShip"
@@ -10195,7 +9850,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Missile"
                 "Tech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -10213,7 +9867,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Cannon"
                 "Tech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -10230,7 +9883,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Missile"
                 "Tech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -10248,7 +9900,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Missile"
                 "Tech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -10264,7 +9915,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Astromech"
                 "Tech"
-                "Illicit"
                 "Modification"
                 "Configuration"
                 "HardpointShip"
@@ -10283,7 +9933,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Astromech"
                 "Tech"
-                "Illicit"
                 "Modification"
                 "Configuration"
                 "HardpointShip"
@@ -10309,7 +9958,6 @@ exportObj.basicCardData = ->
                 "Torpedo"
                 "Missile"
                 "Device"
-                "Illicit"
                 "Modification"
                 "Configuration"
                 "Title"
@@ -10332,7 +9980,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Sensor"
                 "Missile"
-                "Illicit"
                 "Configuration"
                 "Modification"
             ]
@@ -10352,7 +9999,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Talent"
                 "Missile"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -10372,7 +10018,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Torpedo"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -10393,8 +10038,7 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Sensor"
                 "Cannon"
-                "Missile"     
-                "Illicit"       
+                "Missile"            
                 "Configuration"
             ]
         }
@@ -10410,7 +10054,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Talent"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -10430,7 +10073,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Talent"
                 "Missile"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -10474,7 +10116,6 @@ exportObj.basicCardData = ->
                 "Missile"
                 "Astromech"
                 "Device"
-                "Illicit"
             ]
         }
         {
@@ -10494,7 +10135,6 @@ exportObj.basicCardData = ->
                 "Missile"
                 "Astromech"
                 "Device"
-                "Illicit"
             ]
         }
         {
@@ -10514,7 +10154,6 @@ exportObj.basicCardData = ->
                 "Missile"
                 "Astromech"
                 "Device"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -10530,7 +10169,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Missile"
-                "Illicit"
                 "Configuration"
             ]
         }
@@ -10548,7 +10186,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Missile"
-                "Illicit"
                 "Configuration"
             ]
         }
@@ -10570,7 +10207,6 @@ exportObj.basicCardData = ->
                 "Force"
                 "Talent"
                 "Missile"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -10591,7 +10227,6 @@ exportObj.basicCardData = ->
                 "Cannon"
                 "Missile"
                 "Device"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -10607,7 +10242,6 @@ exportObj.basicCardData = ->
             loadout: 8
             slots: [
                 "Talent"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -10625,7 +10259,6 @@ exportObj.basicCardData = ->
             loadout: 6
             slots: [
                 "Missile"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -10641,7 +10274,6 @@ exportObj.basicCardData = ->
             loadout: 6
             slots: [
                 "Talent"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -10661,7 +10293,6 @@ exportObj.basicCardData = ->
             loadout: 6
             slots: [
                 "Talent"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -10684,8 +10315,7 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Tech"
                 "Cannon"
-                "Missile"
-                "Illicit"           
+                "Missile"            
                 "Configuration"
             ]
         }
@@ -10702,8 +10332,7 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Sensor"
                 "Cannon"
-                "Missile"    
-                "Illicit"        
+                "Missile"            
                 "Configuration"
             ]
         }
@@ -10720,7 +10349,6 @@ exportObj.basicCardData = ->
                 "Torpedo"
                 "Missile"
                 "Device"
-                "Illicit"
             ]
         }
         {
@@ -10737,7 +10365,6 @@ exportObj.basicCardData = ->
                 "Missile"
                 "Astromech"
                 "Device"
-                "Illicit"
             ]
         }
         {
@@ -10860,7 +10487,6 @@ exportObj.basicCardData = ->
                 "Turret"
                 "Astromech"
                 "Device"
-                "Illicit"
                 "Modification"
                 "Modification"
                 "Configuration"
@@ -10881,7 +10507,6 @@ exportObj.basicCardData = ->
                 "Astromech"
                 "Device"
                 "Device"
-                "Illicit"
                 "Modification"
                 "Modification"
                 "Configuration"
@@ -10902,7 +10527,6 @@ exportObj.basicCardData = ->
                 "Turret"
                 "Astromech"
                 "Device"
-                "Illicit"
                 "Modification"
                 "Modification"
                 "Configuration"
@@ -10924,7 +10548,6 @@ exportObj.basicCardData = ->
                 "Missile"
                 "Astromech"
                 "Device"
-                "Illicit"
                 "Modification"
                 "Modification"
                 "Configuration"
@@ -10946,7 +10569,6 @@ exportObj.basicCardData = ->
                 "Turret"
                 "Astromech"
                 "Device"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -10988,7 +10610,6 @@ exportObj.basicCardData = ->
                 "Turret"
                 "Astromech"
                 "Device"
-                "Illicit"
                 "Modification"
                 "Modification"
                 "Configuration"
@@ -11008,7 +10629,6 @@ exportObj.basicCardData = ->
                 "Turret"
                 "Astromech"
                 "Device"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -11051,7 +10671,6 @@ exportObj.basicCardData = ->
                 "Missile"
                 "Tech"
                 "Tech"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -11071,7 +10690,6 @@ exportObj.basicCardData = ->
                 "Cannon"
                 "Tech"
                 "Tech"
-                "Illicit"
                 "Configuration"
             ]
         }
@@ -11089,7 +10707,6 @@ exportObj.basicCardData = ->
                 "Missile"
                 "Tech"
                 "Tech"
-                "Illicit"
                 "Configuration"
             ]
         }
@@ -11108,7 +10725,6 @@ exportObj.basicCardData = ->
                 "Missile"
                 "Tech"
                 "Tech"
-                "Illicit"
                 "Configuration"
             ]
         }
@@ -11125,7 +10741,6 @@ exportObj.basicCardData = ->
                 "Missile"
                 "Tech"
                 "Tech"
-                "Illicit"
                 "Configuration"
             ]
         }
@@ -11142,7 +10757,6 @@ exportObj.basicCardData = ->
                 "Missile"
                 "Tech"
                 "Tech"
-                "Illicit"
                 "Configuration"
             ]
         }
@@ -11164,7 +10778,6 @@ exportObj.basicCardData = ->
                 "Missile"
                 "Gunner"
                 "Device"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -11186,7 +10799,6 @@ exportObj.basicCardData = ->
                 "Gunner"
                 "Device"
                 "Device"
-                "Illicit"
                 "Modification"
                 "Modification"
             ]
@@ -11207,7 +10819,6 @@ exportObj.basicCardData = ->
                 "Gunner"
                 "Device"
                 "Device"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -11227,7 +10838,6 @@ exportObj.basicCardData = ->
                 "Gunner"
                 "Device"
                 "Device"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -11246,7 +10856,6 @@ exportObj.basicCardData = ->
                 "Gunner"
                 "Device"
                 "Device"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -11264,7 +10873,6 @@ exportObj.basicCardData = ->
                 "Missile"
                 "Device"
                 "Device"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -11282,7 +10890,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Talent"
                 "Torpedo"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -11298,7 +10905,6 @@ exportObj.basicCardData = ->
             keyword: ["Mandalorian"]
             slots: [
                 "Torpedo"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -11318,7 +10924,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Talent"
                 "Torpedo"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -11335,7 +10940,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Torpedo"
-                "Illicit"
                 "Modification"
                 "Modification"
             ]
@@ -11385,7 +10989,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Missile"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -11412,7 +11015,6 @@ exportObj.basicCardData = ->
                 "Gunner"
                 "Missile"
                 "Device"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -11432,7 +11034,6 @@ exportObj.basicCardData = ->
                 "Crew"
                 "Gunner"
                 "Device"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -11457,7 +11058,6 @@ exportObj.basicCardData = ->
                 "Missile"
                 "Missile"
                 "Device"
-                "Illicit"
                 "Modification"
                 "Modification"
                 "Title"
@@ -11484,7 +11084,6 @@ exportObj.basicCardData = ->
                 "Missile"
                 "Missile"
                 "Device"
-                "Illicit"
                 "Modification"
                 "Modification"
                 "Title"
@@ -11506,7 +11105,6 @@ exportObj.basicCardData = ->
                 "Crew"
                 "Gunner"
                 "Device"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -11590,7 +11188,6 @@ exportObj.basicCardData = ->
                 "Crew"
                 "Gunner"
                 "Device"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -11610,7 +11207,6 @@ exportObj.basicCardData = ->
                 "Gunner"
                 "Device"
                 "Device"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -11633,7 +11229,6 @@ exportObj.basicCardData = ->
                 "Gunner"
                 "Torpedo"
                 "Device"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -11653,7 +11248,6 @@ exportObj.basicCardData = ->
                 "Crew"
                 "Gunner"
                 "Device"
-                "Illicit"
                 "Modification"
                 "Configuration"
             ]
@@ -11674,7 +11268,6 @@ exportObj.basicCardData = ->
                 "Crew"
                 "Gunner"
                 "Device"
-                "Illicit"
                 "Modification"
                 "Modification"
                 "Configuration"
@@ -11803,7 +11396,6 @@ exportObj.basicCardData = ->
                 "Force"
                 "Talent"
                 "Astromech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -11823,7 +11415,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Force"
                 "Astromech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -11844,7 +11435,6 @@ exportObj.basicCardData = ->
                 "Force"
                 "Force"
                 "Astromech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -11866,7 +11456,6 @@ exportObj.basicCardData = ->
                 "Force"
                 "Talent"
                 "Astromech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -11886,7 +11475,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Force"
                 "Astromech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -11906,7 +11494,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Force"
                 "Astromech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -11926,7 +11513,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Force"
                 "Astromech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -11945,7 +11531,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Force"
                 "Astromech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -11967,7 +11552,6 @@ exportObj.basicCardData = ->
                 "Force"
                 "Talent"
                 "Astromech"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -12090,7 +11674,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Cannon"
                 "Cannon"
-                "Illicit"
                 "Modification"
                 "Modification"
             ]
@@ -12108,7 +11691,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Cannon"
                 "Cannon"
-                "Illicit"
                 "Modification"
                 "Modification"
             ]
@@ -12126,7 +11708,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Cannon"
                 "Cannon"
-                "Illicit"
                 "Modification"
                 "Modification"
             ]
@@ -12145,7 +11726,6 @@ exportObj.basicCardData = ->
                 "Cannon"
                 "Cannon"
                 "Missile"
-                "Illicit"
                 "Modification"
             ]
             applies_condition: 'Guarded'.canonicalize()
@@ -12162,7 +11742,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Cannon"
                 "Cannon"
-                "Illicit"
                 "Modification"
             ]
         }
@@ -12180,7 +11759,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Talent"
                 "Sensor"
-                "Illicit"
                 "Modification"
                 "VersatileShip"
             ]
@@ -12201,7 +11779,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Talent"
                 "Sensor"
-                "Illicit"
                 "Modification"
                 "Modification"
                 "VersatileShip"
@@ -12222,7 +11799,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Sensor"
-                "Illicit"
                 "Modification"
                 "Modification"
                 "VersatileShip"
@@ -12243,7 +11819,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Sensor"
-                "Illicit"
                 "Modification"
                 "VersatileShip"
             ]
@@ -12262,7 +11837,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Talent"
                 "Sensor"
-                "Illicit"
                 "Modification"
                 "VersatileShip"
             ]
@@ -12280,7 +11854,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Sensor"
-                "Illicit"
                 "Modification"
                 "VersatileShip"
             ]
@@ -12298,7 +11871,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Sensor"
-                "Illicit"
                 "Modification"
                 "VersatileShip"
             ]
@@ -12318,7 +11890,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Sensor"
                 "Cannon"
-                "Illicit"
                 "Modification"
                 "VersatileShip"
             ]
@@ -12335,7 +11906,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Sensor"
-                "Illicit"
                 "VersatileShip"
             ]
         }
@@ -12350,7 +11920,6 @@ exportObj.basicCardData = ->
             keyword: ["Clone"]
             slots: [
                 "Sensor"
-                "Illicit"
                 "Modification"
                 "VersatileShip"
             ]
@@ -17295,64 +16864,6 @@ exportObj.basicCardData = ->
                 }
             ]
         }
-        {
-            name: "Guzzolene Injector"
-            id: 473
-            points: 2
-            charge: 2
-            slot: "Illicit"
-        }
-        {
-            name: "Supercharger"
-            id: 474
-            points: 3
-            charge: 3
-            slot: "Illicit"
-        }
-        {
-            name: "Diamond-lined Windshield"
-            id: 475
-            points: 3
-            slot: "Illicit"
-        }
-        {
-            name: "Suspicious-looking Droid"
-            id: 476
-            points: 4
-            charge: 3
-            unique: true
-            slot: "Illicit"
-        }
-        {
-            name: "Scavenged Upgrade"
-            id: 477
-            points: 4
-            unique: true
-            slot: "Illicit"
-        }
-        {
-            name: "Prototype G-Diffuser"
-            id: 478
-            points: 4
-            charge: 1
-            unique: true
-            slot: "Illicit"
-        }
-        {
-            name: "Overclocked Hyperdrive"
-            id: 479
-            points: 5
-            unique: true
-            slot: "Illicit"
-        }
-        {
-            name: "Defective Jawaballs"
-            id: 480
-            points: 5
-            charge: 2
-            slot: "Illicit"
-            applies_condition: 'Defective Jawaball'.canonicalize()
-        }
     ]
 
 
@@ -17530,10 +17041,6 @@ exportObj.basicCardData = ->
         {
             name: '''Guarded'''
             id: 40
-        }
-        {
-            name: 'Defective Jawaball'
-            id: 41
         }
     ]
 
@@ -25762,7 +25269,6 @@ exportObj.translations.English =
         "Fugitives and Collaborators Squadron Pack": "Fugitives and Collaborators Squadron Pack"
         "First Order Conversion Kit": "First Order Conversion Kit"
         "M3-A Interceptor Expansion Pack": "M3-A Interceptor Expansion Pack"
-        "Purchased from a Very Legitimate Jawa": "Purchased from a Very Legitimate Jawa"
     ui:
         "shipSelectorPlaceholder": "Select a ship"
         "pilotSelectorPlaceholder": "Select a pilot"
@@ -28540,22 +28046,6 @@ exportObj.cardLoaders.English = () ->
            text: """<strong>Attack (%LOCK%):</strong> Spend 1 %CHARGE%. After you declare the defender, the defender may choose to suffer 1 %CRIT% damage. If it does, skip the Attack and Defense Dice steps and the attack is treated as hitting."""
         "Xanadu Blood":
            text: """Add %CREW% and %DEVICE% slots."""
-        "Guzzolene Injector":
-           text: '''<i>We're not sure what "Guzzolene" is. Probably some kind of wild-space thing. Puts a kick up your thrusters, though!</i> %LINEBREAK% Before you execute a maneuver, you may spend 1 %CHARGE%. If you do, increase that maneuver's speed by 1, if able, then roll 1 attack die. On a %HIT%/%CRIT% result, suffer 1 %HIT% damage.'''
-        "Supercharger":
-           text: '''<i>It has "I feel the need" scrawled haphazardly on the side.</i> %LINEBREAK% <strong>Setup:</strong> Lose 3 %CHARGE%. %LINEBREAK% After you fully execute a speed 3-5 maneuver, recover 1 %CHARGE%. Then, you <strong>must</strong> spend 3 %CHARGE% if able to perform a %SLAM% action, even while stressed. While performing that action, you must use a template of 1 speed higher, if able. Then, gain 1 strain token and remove 1 disarm token. %LINEBREAK% Whenever you fail a %SLAM% action, suffer 1 %HIT% damage.'''
-        "Diamond-lined Windshield":
-           text: """<i>Effective, but sometimes lets a bit of a draft into the cockpit.</i> %LINEBREAK% Before you would suffer the effects of moving through or overlapping an obstacle, roll 1 attack die. On a %HIT% result, do not suffer the effects of that obstacle."""
-        "Suspicious-looking Droid":
-           text: '''<i>Found in the drifting wreck of a squid-like ship, this droid is emblazoned with the code "HK47".</i> %LINEBREAK% <strong>Suspicious-looking Droid:</strong> Setup: Equip this side faceup. %LINEBREAK% During the System Phase, you <strong>must</strong> spend 1 %CHARGE% to gain 1 calculate token, if able. During the End Phase, if all of your %CHARGE% are inactive, flip this card. %LINEBREAK% <strong>Revolutionary Droid:</strong> If you would gain a focus token, you gain a calculate token instead. Treat your effects referring to "focus tokens" as referring to "calculate tokens" instead.'''
-        "Scavenged Upgrade":
-           text: '''<i>We guarantee* these will play well with your ship.</i> %LINEBREAK% <strong>Setup:</strong> Before you deploy, select one of the following upgrades at random and equip it to your ship (ignoring all requirements and without paying its cost): %LINEBREAK% Deadman's Switch, BT-1, Ion Limiter Override, Pattern Analyzer, Heavy Laser Cannon, Collision Detector, Hondo Ohnaka, GNK "Gonk" Droid'''
-        "Prototype G-Diffuser":
-           text: """<i>The box looks like it slots 3 more of these, but there's only one left - and it seems to have suffered extensive environmental damage.</i> %LINEBREAK% After you fully execute a sideslip, you may spend 1 %CHARGE%. If you do, remove all of your stress tokens, then gain strain tokens equal to twice the amount of stress tokens removed this way."""
-        "Overclocked Hyperdrive":
-           text: """<i>The velocity of this thing is simply ludicrous.</i> %LINEBREAK% When you would be deployed, randomly select an objective token. Deploy from that objective token instead, inserting the [1 %STRAIGHT%] template into either set of guides and aligning it with your rear guides."""
-        "Defective Jawaballs":
-           text: """<i>We had some left over in the warehouse, but don't worry, they're still good. Probably.</i> %LINEBREAK% During the System Phase, you may spend 1 %CHARGE% to launch a Defective Jawaball using the [1 %STRAIGHT%] template."""
 
 
         # Epic upgrades
@@ -28854,8 +28344,6 @@ exportObj.cardLoaders.English = () ->
            text: '''INIT: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, RANGE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Types:</strong> Device, Remote %LINEBREAK% After an enemy ship overlaps you, it gains 1 strain token.%LINEBREAK% <strong>Activation Phase:</strong> At the start of this phase, you may relocate forward using a [1 %TURNLEFT%], [2 %STRAIGHT%], or [1 %TURNRIGHT%] template.%LINEBREAK% <strong>Engagement Phase:</strong> You cannot attack if there are enemy ships at range 0. To perform an attack, you must spend 1 %CHARGE%. While you perform an attack, you may change 1 %FOCUS% result to a %HIT% result.'''
         '''Guarded''':
            text: '''While you defend, if you are not in the attacker's %BULLSEYEARC%, roll 1 additional defense die for each friendly calculating or evading <b>MagnaGuard Protector</b> in the attack arc.'''
-        'Defective Jawaball':
-           text: '''<strong>Types:</strong> Marker %LINEBREAK% Whenever a ship overlaps or moves through the Defective Jawaball, it gains 2 jam tokens. At the end of the Activation Phase, remove all Defective Jawaballs. %LINEBREAK% <i>The Defective Jawaball is a marker, not a device; it cannot be fused, does not detonate, and does not interact with effects such as Feedback Ping.</i>'''
 
     # in this file the display_name is often omitted, if it is identical to the name. I am too lazy to add those manually (though running the translation script would automatically do so). As this will pop up with every new card, I add those tags here
     for name, data of pilot_translations
@@ -39593,48 +39081,7 @@ exportObj.manifestByExpansion =
             count: 1
         }
     ]
-    "Purchased from a Very Legitimate Jawa": [
-        {
-            name: 'Guzzolene Injector'
-            type: 'upgrade'
-            count: 10
-        }
-        {
-            name: 'Supercharger'
-            type: 'upgrade'
-            count: 10
-        }
-        {
-            name: 'Diamond-lined Windshield'
-            type: 'upgrade'
-            count: 10
-        }
-        {
-            name: 'Suspicious-looking Droid'
-            type: 'upgrade'
-            count: 10
-        }
-        {
-            name: 'Scavenged Upgrade'
-            type: 'upgrade'
-            count: 10
-        }
-        {
-            name: 'Prototype G-Diffuser'
-            type: 'upgrade'
-            count: 10
-        }
-        {
-            name: 'Overclocked Hyperdrive'
-            type: 'upgrade'
-            count: 10
-        }
-        {
-            name: 'Defective Jawaballs'
-            type: 'upgrade'
-            count: 10
-        }
-    ]
+
     'Loose Ships': [
         {
             name: 'Auzituck Gunship'
